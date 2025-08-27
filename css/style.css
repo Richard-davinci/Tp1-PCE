@@ -1,0 +1,94 @@
+:root {
+    --lt-primary: #23a4fb;
+    --lt-cyan: #00ffcc;
+    --lt-success: #00d084;
+    --lt-bg: #0d0d0d;
+    --lt-text: #ffffff;
+}
+
+/* Base */
+html, body {
+    background-color: #f3f3f3;
+}
+
+a {
+    color: var(--lt-cyan);
+}
+
+a:hover {
+    color: #8ff7e6;
+}
+
+::selection {
+    background: rgba(0, 255, 204, .3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-cyan {
+    color: var(--lt-cyan) !important;
+}
+
+.bg-card-dark {
+    background: rgba(255, 255, 255, .2);
+}
+.bg-card-light {
+    background: rgba(89, 89, 89, 0.8);
+    color: #fff;
+}
+
+.btn-cyan {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--lt-cyan);
+    --bs-btn-border-color: var(--lt-cyan);
+    --bs-btn-hover-bg: #7ff5e3;
+    --bs-btn-hover-border-color: #7ff5e3;
+    --bs-btn-active-bg: #5feedd;
+    --bs-btn-active-border-color: #5feedd;
+}
+
+.btn-outline-accent {
+    --bs-btn-color: var(--lt-cyan);
+    --bs-btn-border-color: var(--lt-cyan);
+    --bs-btn-hover-bg: rgba(0, 255, 204, .15);
+    --bs-btn-hover-border-color: var(--lt-cyan);
+}
+
+/* Focus visible */
+:focus-visible {
+    outline: 2px solid var(--lt-cyan);
+    outline-offset: 2px;
+    border-radius: .25rem;
+}
+
+/* Navbar active link */
+.navbar .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Tables */
+.table-dark th, .table-dark td {
+    vertical-align: middle;
+}
+
+/* Gradiente sutil hero */
+.bg-gradient-dark {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
+    radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
+    var(--lt-bg);
+}
+
+/* Utilities */
+.scroll-mt-navbar {
+    scroll-margin-top: 5rem;
+}
+.navbar .nav-link.active {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
