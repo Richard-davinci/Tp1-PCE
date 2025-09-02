@@ -5,17 +5,11 @@
     --bg: #0d0d0d;
     --text: #ffffff;
 }
+
 @font-face {
     font-family: 'Quantum';
     src: url('../assets/fonts/Quantum.otf') format('opentype');
     font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'BankGothic';
-    src: url('../assets/fonts/BankGothic-Regular.ttf') format('truetype');
-    font-weight: normal;
     font-style: normal;
 }
 
@@ -26,14 +20,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'BankGothic';
-    src: url('../assets/fonts/BankGothic-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-
 body {
     font-family: 'BankGothic', sans-serif;
     font-weight: 300;
@@ -43,11 +29,11 @@ body {
 html, body {
     background-color: #f3f3f3;
 }
+
 .navbar-brand {
     font-family: 'Quantum', sans-serif;
     font-weight: bold;
     font-variant: small-caps;
-
 }
 
 a {
@@ -57,7 +43,8 @@ a {
 a:hover {
     color: #8ff7e6;
 }
-p, li, a {
+
+p, li {
     font-family: 'BankGothic', sans-serif;
     font-weight: 300; /* light */
 }
@@ -70,6 +57,7 @@ p, li, a {
 .bg-card-dark {
     background: rgba(255, 255, 255, .2);
 }
+
 .bg-card-light {
     background: rgba(89, 89, 89, 0.8);
     color: #fff;
@@ -121,9 +109,11 @@ p, li, a {
 .scroll-mt-navbar {
     scroll-margin-top: 5rem;
 }
-.navbar .nav-link.active {
-    font-weight: 600;
+
+.navbar .font-Quantum.active {
     text-decoration: underline;
     text-underline-offset: 6px;
+    font-family: 'BankGothic', sans-serif;
+    font-size: 1.2rem;
 }
 
