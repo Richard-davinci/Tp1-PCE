@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lilitech — Servicios web</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-dark text-light">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom border-secondary">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                        <img src="../img/Logo.webp" alt="logo lilitech" height="70">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                            aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="btn btn-outline-accent ms-lg-2" href="iniciar-sesion.html"><i class="bi bi-person"></i> Login</a></li>
+                            <li class="nav-item"><a class="btn btn-cyan ms-lg-2" href="admin.html"><i class="bi bi-speedometer2"></i> Admin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="py-5">
+            <div class="container">
+                <header class="d-flex flex-wrap flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 fw-bold">Elegí tu plan</h1>
+                        <p class="text-secondary mb-0">Podés cambiarlo cuando quieras. Precios en ARS.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="small text-secondary">Facturación</span>
+                        <div class="btn-group" role="group" aria-label="Selector de facturación">
+                            <input type="radio" class="btn-check" name="billing" id="billMonthly" autocomplete="off" checked>
+                            <label class="btn btn-outline-light" for="billMonthly">Mensual</label>
+                            <input type="radio" class="btn-check" name="billing" id="billYearly" autocomplete="off">
+                            <label class="btn btn-outline-light" for="billYearly">Anual <span class="badge text-bg-success ms-1">-10%</span></label>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="row g-4" id="plansGrid" data-billing="monthly" aria-live="polite">
+                    <!-- Plan Starter -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100 bg-surface border-0 shadow-sm" data-plan="Starter" data-price="29990">
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="h5">Starter</h2>
+                                <p class="text-secondary">Ideal para arrancar con presencia sólida.</p>
+                                <ul class="list-unstyled small text-secondary flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Sitio institucional básico</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>1 landing incluida</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Mantenimiento base</li>
+                                </ul>
+                                <p class="h4 mt-2"><span class="price-label" aria-label="Precio mensual">$29.990</span><span class="small text-secondary"> / mes</span></p>
+                                <div class="mt-3">
+                                    <a class="btn btn-cyan w-100 choose-plan" href="#" data-next="auth" aria-label="Elegir Starter">Elegir plan</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Plan Pro -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100 bg-surface border-0 shadow-sm" data-plan="Pro" data-price="69990">
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="h5">Pro</h2>
+                                <p class="text-secondary">Para crecer con más features y soporte.</p>
+                                <ul class="list-unstyled small text-secondary flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Starter</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>SEO on-page</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>2 landings / mes</li>
+                                </ul>
+                                <p class="h4 mt-2"><span class="price-label">$69.990</span><span class="small text-secondary"> / mes</span></p>
+                                <div class="mt-3">
+                                    <a class="btn btn-cyan w-100 choose-plan" href="#" data-next="auth" aria-label="Elegir Pro">Elegir plan</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Plan Premium -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100 bg-surface border-0 shadow-sm" data-plan="Premium" data-price="149990">
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="h5">Premium</h2>
+                                <p class="text-secondary">Para marcas que necesitan iterar fuerte.</p>
+                                <ul class="list-unstyled small text-secondary flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Pro</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Soporte prioritario</li>
+                                    <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Reportes mensuales</li>
+                                </ul>
+                                <p class="h4 mt-2"><span class="price-label">$149.990</span><span class="small text-secondary"> / mes</span></p>
+                                <div class="mt-3">
+                                    <a class="btn btn-cyan w-100 choose-plan" href="#" data-next="auth" aria-label="Elegir Premium">Elegir plan</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <p class="text-secondary small mt-3">Los precios son orientativos y pueden variar según alcance.</p>
+            </div>
+        </main>
+        
+        <footer class="py-4 bg-black border-top border-secondary">
+            <div class="container">
+                <div class="row g-3 align-items-center">
+                    <div class="col-12 col-md d-flex align-items-center gap-3">
+                        <img src="../img/Logo.webp" alt="Lili Studio" class="img-fluid">
+                        <p class="mb-0 small text-secondary">© <span id="year"></span> Lili Studio — Argentina</p>
+                    
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <ul class="list-unstyled mb-0 small text-secondary d-flex flex-column flex-md-row gap-3">
+                            <li><i class="bi bi-person me-1 text-accent" aria-hidden="true"></i><span class="visually-hidden">Alumno:</span> Ricardo Rodolfo Garcia</li>
+                            <li><i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años</li>
+                            <li><i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a></li>
+                            <li><i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a></li>
+                            <li><i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

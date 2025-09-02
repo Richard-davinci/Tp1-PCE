@@ -1,9 +1,41 @@
 :root {
-    --lt-primary: #23a4fb;
-    --lt-cyan: #00ffcc;
-    --lt-success: #00d084;
-    --lt-bg: #0d0d0d;
-    --lt-text: #ffffff;
+    --primary: #23a4fb;
+    --cyan: #00ffcc;
+    --success: #00d084;
+    --bg: #0d0d0d;
+    --text: #ffffff;
+}
+@font-face {
+    font-family: 'Quantum';
+    src: url('../assets/fonts/Quantum.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BankGothic';
+    src: url('../assets/fonts/BankGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BankGothic';
+    src: url('../assets/fonts/BankGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BankGothic';
+    src: url('../assets/fonts/BankGothic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'BankGothic', sans-serif;
 }
 
 /* Base */
@@ -12,24 +44,20 @@ html, body {
 }
 
 a {
-    color: var(--lt-cyan);
+    color: var(--cyan);
 }
 
 a:hover {
     color: #8ff7e6;
 }
-
-::selection {
-    background: rgba(0, 255, 204, .3);
+p, li, a {
+    font-family: 'BankGothic', sans-serif;
+    font-weight: 300; /* light */
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 
 .text-cyan {
-    color: var(--lt-cyan) !important;
+    color: var(--cyan) !important;
 }
 
 .bg-card-dark {
@@ -42,8 +70,8 @@ img {
 
 .btn-cyan {
     --bs-btn-color: #000;
-    --bs-btn-bg: var(--lt-cyan);
-    --bs-btn-border-color: var(--lt-cyan);
+    --bs-btn-bg: var(--cyan);
+    --bs-btn-border-color: var(--cyan);
     --bs-btn-hover-bg: #7ff5e3;
     --bs-btn-hover-border-color: #7ff5e3;
     --bs-btn-active-bg: #5feedd;
@@ -51,15 +79,15 @@ img {
 }
 
 .btn-outline-accent {
-    --bs-btn-color: var(--lt-cyan);
-    --bs-btn-border-color: var(--lt-cyan);
+    --bs-btn-color: var(--cyan);
+    --bs-btn-border-color: var(--cyan);
     --bs-btn-hover-bg: rgba(0, 255, 204, .15);
-    --bs-btn-hover-border-color: var(--lt-cyan);
+    --bs-btn-hover-border-color: var(--cyan);
 }
 
 /* Focus visible */
 :focus-visible {
-    outline: 2px solid var(--lt-cyan);
+    outline: 2px solid var(--cyan);
     outline-offset: 2px;
     border-radius: .25rem;
 }
@@ -75,11 +103,11 @@ img {
     vertical-align: middle;
 }
 
-/* Gradiente sutil hero */
+/* Gradiente */
 .bg-gradient-dark {
     background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
     radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
-    var(--lt-bg);
+    var(--bg);
 }
 
 /* Utilities */
