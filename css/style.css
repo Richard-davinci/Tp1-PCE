@@ -36,11 +36,18 @@
 
 body {
     font-family: 'BankGothic', sans-serif;
+    font-weight: 300;
 }
 
 /* Base */
 html, body {
     background-color: #f3f3f3;
+}
+.navbar-brand {
+    font-family: 'Quantum', sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+
 }
 
 a {
