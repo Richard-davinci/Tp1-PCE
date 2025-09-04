@@ -1,119 +1,136 @@
 :root {
-    --primary: #23a4fb;
-    --cyan: #00ffcc;
-    --success: #00d084;
-    --bg: #0d0d0d;
-    --text: #ffffff;
+    --azul: #23a4fb;
+    --turquesa: #00ffcc;
+    --verde: #00d084;
+    --negro: #0d0d0d;
 }
 
 @font-face {
     font-family: 'Quantum';
     src: url('../assets/fonts/Quantum.otf') format('opentype');
     font-weight: bold;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'BankGothic';
     src: url('../assets/fonts/BankGothic-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 500;
 }
 
-body {
-    font-family: 'BankGothic', sans-serif;
-    font-weight: 300;
-}
-
-/* Base */
 html, body {
     background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
 }
 
-.navbar-brand {
+.font-quantum {
     font-family: 'Quantum', sans-serif;
-    font-weight: bold;
-    font-variant: small-caps;
 }
 
-a {
-    color: var(--cyan);
-}
-
-a:hover {
-    color: #8ff7e6;
-}
-
-p, li {
+.font-bankgothic {
     font-family: 'BankGothic', sans-serif;
-    font-weight: 300; /* light */
 }
 
+.btn-turquesa {
+    font-family: 'Bankgothic', sans-serif;
+    color: #000;
+    background-color: var(--turquesa);
+    border-color: var(--turquesa);
+}
 
-.text-cyan {
-    color: var(--cyan) !important;
+.btn-turquesa:hover {
+    background-color: #7ff5e3;
+    color: #000;
+}
+
+.btn-turquesa:active {
+    background-color: #5feedd;
+}
+
+.btn-outline-turquesa {
+    color: var(--turquesa);
+    border-color: var(--turquesa);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item .btn-outline-turquesa:hover,
+.nav-item .btn-outline-turquesa:focus {
+    color: #000;
+    background-color: var(--turquesa) ;
+    border-color: var(--turquesa);
+}
+
+.navbar .nav-link.active, .navbar .nav-link:hover {
+    color: var(--turquesa) !important;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+.text-turquesa {
+    color: var(--turquesa) !important;
+}
+
+.bg-turquesa {
+    background-color: var(--turquesa);
+    color: var(--negro);
 }
 
 .bg-card-dark {
     background: rgba(255, 255, 255, .2);
 }
 
+.bg-gradient-dark {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
+    radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
+    var(--negro);
+}
+
+.scroll-mt-navbar {
+    scroll-margin-top: 5rem;
+}
+
+
+
 .bg-card-light {
     background: rgba(89, 89, 89, 0.8);
     color: #fff;
 }
 
-.btn-cyan {
-    --bs-btn-color: #000;
-    --bs-btn-bg: var(--cyan);
-    --bs-btn-border-color: var(--cyan);
-    --bs-btn-hover-bg: #7ff5e3;
-    --bs-btn-hover-border-color: #7ff5e3;
-    --bs-btn-active-bg: #5feedd;
-    --bs-btn-active-border-color: #5feedd;
-}
-
-.btn-outline-accent {
-    --bs-btn-color: var(--cyan);
-    --bs-btn-border-color: var(--cyan);
-    --bs-btn-hover-bg: rgba(0, 255, 204, .15);
-    --bs-btn-hover-border-color: var(--cyan);
-}
-
-/* Focus visible */
-:focus-visible {
-    outline: 2px solid var(--cyan);
-    outline-offset: 2px;
-    border-radius: .25rem;
-}
-
-/* Navbar active link */
-.navbar .nav-link.active {
-    color: #fff !important;
-    font-weight: 600;
-}
 
 /* Tables */
 .table-dark th, .table-dark td {
     vertical-align: middle;
 }
 
-/* Gradiente */
-.bg-gradient-dark {
-    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
-    radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
-    var(--bg);
+/* Footer */
+footer {
+    color: #bbb;
 }
-
-/* Utilities */
-.scroll-mt-navbar {
-    scroll-margin-top: 5rem;
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
-
-.navbar .font-Quantum.active {
+footer a:hover {
     text-decoration: underline;
-    text-underline-offset: 6px;
-    font-family: 'BankGothic', sans-serif;
-    font-size: 1.2rem;
+    color: #00d1b2; /* Color de acento */
+}
+footer .text-accent {
+    color: #00d1b2; /* Acento en los íconos */
+}
+/* Centra el logo en su contenedor */
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
+.navbar-brand img {
+    max-width: 70%;
+    height: auto;
+}
