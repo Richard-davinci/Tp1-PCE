@@ -13,23 +13,37 @@
     </head>
     <body class="bg-dark text-light">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom border-secondary">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
                 <div class="container">
-                    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-                        Lili-Studio
+                    <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
+                        <img src="../img/logo.png" alt="logo" class="img-fluid w-75">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                            aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNav" style="border-color: var(--turquesa); color: var(--turquesa);">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div id="mainNav" class="collapse navbar-collapse">
-                        <ul class="navbar-nav ms-auto align-items-lg-center">
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="nosotros.html">Sobre nosotros</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link active" href="contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="btn btn-outline-accent ms-lg-2" href="iniciar-sesion.html"><i class="bi bi-person"></i> Login</a></li>
-                            <li class="nav-item"><a class="btn btn-cyan ms-lg-2" href="admin.html"><i class="bi bi-speedometer2"></i> Admin</a></li>
+                        <ul class="navbar-nav ms-auto font-bankgothic justify-content-center">
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../views/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../views/servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link active" href="../views/contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="btn btn-outline-turquesa ms-2" href="../views/iniciar-sesion.html">
+                                    <i class="bi bi-person"></i> Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="btn btn-turquesa ms-2" href="../views/admin.html">
+                                    <i class="bi bi-speedometer2"></i> Admin</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -94,21 +108,43 @@
             </div>
         </main>
         
-        <footer class="py-4 bg-black border-top border-secondary">
+        <footer class="py-4 bg-black border-top border-secondary fixed-bottom">
             <div class="container">
-                <div class="row g-3 align-items-center">
-                    <div class="col-12 col-md d-flex align-items-center gap-3">
-                        Lili-Studio
-                        <p class="mb-0 small text-secondary">© <span id="year"></span> Lili Studio — Argentina</p>
-                    
+                <div class="row g-4 align-items-center">
+                    <!-- Logo -->
+                    <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
+                        <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
+                            <img src="../img/logo.png" alt="logo" class="img-fluid w-75">
+                        </a>
                     </div>
-                    <div class="col-12 col-md-auto">
-                        <ul class="list-unstyled mb-0 small text-secondary d-flex flex-column flex-md-row gap-3">
-                            <li><i class="bi bi-person me-1 text-accent" aria-hidden="true"></i><span class="visually-hidden">Alumno:</span> Ricardo Rodolfo Garcia</li>
-                            <li><i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años</li>
-                            <li><i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a></li>
-                            <li><i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a></li>
-                            <li><i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a></li>
+                    <!-- Información de contacto -->
+                    <div class="col-12 col-lg-8">
+                        <ul class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+                            <li>
+                                <i class="bi bi-person me-1 text-accent" aria-hidden="true"></i>
+                                <span class="visually-hidden">Alumno:</span> Ricardo Rodolfo Garcia
+                            </li>
+                            <li>
+                                <i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años
+                            </li>
+                            <li>
+                                <i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i>
+                                <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">
+                                    ricardo.garcia@davinci.edu.ar
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i>
+                                <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">
+                                    @lilitech_laplata
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i>
+                                <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">
+                                    lilitech.shop
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
