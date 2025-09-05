@@ -1,29 +1,23 @@
 /* =========================================================
-   LiliEstudio — style.css (organizado)
+   LiliEstudio — style.css (limpio y unificado)
    Estructura:
    1) Reset & Base
-   2) Variables (CSS Custom Props)
+   2) Variables
    3) Tipografías & Helpers
    4) Layout (html/body/main)
    5) Utilidades (textos, fondos, scroll)
    6) Componentes
       6.1) Botones
-      6.2) Navegación (navbar)
-      6.3) Tabs (Underline)
+      6.2) Navbar
+      6.3) Tabs (Underline + Segment)
       6.4) Tablas
       6.5) Footer
       6.6) Avatar navbar
-      6.7) Contenedor admin (admin-shell)
+      6.7) Contenedor admin
    7) Misceláneos
-   ---------------------------------------------------------
-   NOTA: Se preservan reglas y valores originales.
-         Los duplicados se mantienen y están marcados.
    ========================================================= */
 
-
-/* ===================================
-   1) RESET & BASE
-   =================================== */
+/* 1) RESET & BASE */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -43,22 +37,17 @@ input, button, textarea, select {
     font: inherit;
 }
 
-
-/* ===================================
-   2) VARIABLES (CSS CUSTOM PROPS)
-   =================================== */
+/* 2) VARIABLES */
 :root {
     --azul: #0c202d;
     --turquesa: #0ec49f;
     --verde: #00d084;
     --negro: #0d0d0d;
-    --gris: #cfd6dc;
+    --blanco: #cfd6dc;
+    --gris: #43494e;
 }
 
-
-/* ===================================
-   3) TIPOGRAFÍAS & HELPERS
-   =================================== */
+/* 3) TIPOGRAFÍAS & HELPERS */
 @font-face {
     font-family: 'Quantum';
     src: url('../fonts/Quantum.otf') format('opentype');
@@ -74,7 +63,7 @@ input, button, textarea, select {
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .font-quantum {
@@ -85,14 +74,11 @@ input, button, textarea, select {
     font-family: 'BankGothic', sans-serif;
 }
 
-
-/* ===================================
-   4) LAYOUT (html / body / main)
-   =================================== */
+/* 4) LAYOUT */
 html {
     font-size: 100%;
     line-height: 1.15;
-    background-color: #f3f3f3;
+    background-color: rgb(225, 225, 225);
     font-family: 'Roboto', sans-serif;
     height: 100%;
 }
@@ -101,7 +87,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    background-color: #f3f3f3;
+    background-color: rgb(225, 225, 225);
     font-family: 'Roboto', sans-serif;
     height: 100%;
     display: flex;
@@ -112,16 +98,19 @@ main {
     flex: 1 0 auto;
 }
 
-
-/* ===================================
-   5) UTILIDADES (textos, fondos, scroll)
-   =================================== */
-/* Textos/acento */
+/* 5) UTILIDADES (textos, fondos, scroll) */
 .text-turquesa {
-    color: var(--turquesa) !important;
+    color: var(--turquesa);
 }
 
-/* Fondos */
+.text-gris {
+    color: var(--gris);
+}
+
+.text-blanco {
+    color: var(--blanco);
+}
+
 .bg-turquesa {
     background-color: var(--turquesa);
     color: var(--negro);
@@ -132,7 +121,7 @@ main {
 }
 
 .bg-card-light {
-    background: rgba(89, 89, 89, 0.8);
+    background: rgba(89, 89, 89, .8);
     color: #fff;
 }
 
@@ -147,19 +136,14 @@ main {
     color: #fff;
 }
 
-/* Desplazamiento suave */
 .scroll-mt-navbar {
     scroll-margin-top: 5rem;
 }
 
-
-/* ===================================
-   6) COMPONENTES
-   =================================== */
-
+/* 6) COMPONENTES */
 /* 6.1) BOTONES */
 .btn-turquesa {
-    font-family: 'Bankgothic', sans-serif;
+    font-family: 'BankGothic', sans-serif;
     color: #000;
     background-color: var(--turquesa);
     border-color: var(--turquesa);
@@ -176,77 +160,30 @@ main {
 
 .btn-outline-turquesa {
     color: var(--turquesa);
-    border-color: var(--turquesa);
+    border: 1px solid var(--turquesa);
     background-color: transparent;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     font-family: 'BankGothic', sans-serif;
 }
 
-.nav-item .btn-outline-turquesa:hover,
-.nav-item .btn-outline-turquesa:focus {
+.btn-outline-turquesa:hover,
+.btn-outline-turquesa:focus {
     color: #000;
     background-color: var(--turquesa);
     border-color: var(--turquesa);
 }
 
-
-/* 6.2) NAVEGACIÓN (NAVBAR) */
-.navbar .nav-link.active, .navbar .nav-link:hover {
+/* 6.2) NAVBAR */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
     color: var(--turquesa) !important;
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 6px;
 }
 
-
-/* 6.3) TABS (Underline) */
-.tabs-underline {
-    gap: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-}
-
-.tabs-underline .nav-link {
-    color: #bbb;
-    border: none;
-    background: transparent;
-    border-radius: 0;
-    padding: .75rem .5rem;
-    position: relative;
-}
-
-.tabs-underline .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 2px;
-    background: transparent;
-    transform: scaleX(0);
-    transition: transform .2s ease, background .2s ease;
-}
-
-.tabs-underline .nav-link:hover {
-    color: #fff;
-}
-
-.tabs-underline .nav-link:hover::after {
-    background: rgba(255, 255, 255, .35);
-    transform: scaleX(1);
-}
-
-.tabs-underline .nav-link.active {
-    color: var(--turquesa);
-    font-weight: 600;
-}
-
-.tabs-underline .nav-link.active::after {
-    background: var(--turquesa);
-    transform: scaleX(1);
-}
-
-/* ----- DUPLICADO: Tabs estilo “Underline” (igual al login) ----- */
-/* (Se mantiene tal cual estaba en el archivo original) */
+/* 6.3) TABS */
+/* — Underline (optimizado para fondo oscuro: .bg-azul) */
 .tabs-underline {
     gap: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, .15);
@@ -293,25 +230,56 @@ main {
     transform: scaleX(1);
 }
 
-/* ----- /DUPLICADO ----- */
+/* — Segment (píldoras, pensado para .bg-azul) */
+.tabs-segment {
+    display: inline-flex;
+    gap: .5rem;
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: saturate(120%);
+}
 
+.tabs-segment .nav-link {
+    color: #b8c2ca;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: .5rem 1rem;
+    line-height: 1;
+}
+
+.tabs-segment .nav-link:hover {
+    color: #e7eef3;
+}
+
+.tabs-segment .nav-link.active {
+    color: #000;
+    background: var(--turquesa);
+    border-color: var(--turquesa);
+    font-weight: 600;
+    box-shadow: 0 0 0 .12rem rgba(14, 196, 159, .25);
+}
+
+/* chip opcional en tabs */
+.tabs-segment .tab-chip {
+    display: inline-block;
+    padding: .12rem .45rem;
+    border-radius: 999px;
+    background: rgba(14, 196, 159, .15);
+    color: var(--turquesa);
+    border: 1px solid var(--turquesa);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .2px;
+}
 
 /* 6.4) TABLAS */
 .table-dark th, .table-dark td {
     vertical-align: middle;
 }
 
-/* ----- DUPLICADO: Tablas ----- */
-.table-dark th, .table-dark td {
-    vertical-align: middle;
-}
-
-/* ----- /DUPLICADO ----- */
-
-
 /* 6.5) FOOTER */
 footer {
-    flex-shrink: 0; /* Asegura que el footer no se contraiga */
+    flex-shrink: 0;
     color: #bbb;
 }
 
@@ -322,15 +290,14 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-    color: #00d1b2; /* Color de acento */
+    color: #00d1b2;
 }
 
 footer .text-accent {
-    color: #00d1b2; /* Acento en los íconos */
+    color: #00d1b2;
 }
 
-
-/* 6.6) AVATAR EN NAVBAR */
+/* 6.6) AVATAR NAVBAR */
 .navbar-avatar {
     width: 36px;
     height: 36px;
@@ -339,80 +306,54 @@ footer .text-accent {
     border: 1px solid rgba(255, 255, 255, .25);
 }
 
-
-/* 6.7) CONTENEDOR ADMIN (admin-shell) */
+/* 6.7) CONTENEDOR ADMIN */
 .admin-shell {
-    background: #111; /* tono oscuro parejo sobre el gradiente */
+    background: #111;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: .75rem;
 }
 
-
-/* ===================================
-   7) MISCELÁNEOS
-   =================================== */
+/* 7) MISCELÁNEOS */
 .toogler-color {
     border-color: var(--turquesa);
     color: var(--turquesa);
 }
 
-/* Texto secundario más legible en fondos oscuros */
-:root {
-}
-
-/* subí el contraste */
-
-.text-blanco {
-    color: var(--gris);
-}
-.pasos-container {
+.procesos-container, .tecnologias-container {
     padding: 2rem;
     background: linear-gradient(135deg, #0c202d, #0d2a39);
     border-radius: 10px;
     color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    transition: transform .3s;
 }
 
-.pasos-container:hover {
+.procesos-container:hover, .tecnologias-container:hover {
     transform: translateY(-5px);
 }
 
-.pasos-container h3 {
-    font-family: "BankGothic", sans-serif;
-    color: #0ec49f;
-    border-bottom: 2px solid #0ec49f;
-    padding-bottom: 0.5rem;
+.procesos-container h3, .tecnologias-container h3 {
+    font-family: 'BankGothic', sans-serif;
+    border-bottom: 2px solid var(--turquesa);
+    padding-bottom: .5rem;
     margin-bottom: 1.5rem;
 }
 
-.pasos-container ul {
-    margin: 0;
-    padding-left: 1.5rem;
+/* Cards de servicio */
+.service-card .card-img-top {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    background: #0f0f0f;
 }
 
-.pasos-container li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1rem;
-    font-weight: 400;
+.hero-servicios {
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
 }
 
-.pasos-container li::before {
-    content: "✔";
-    color: #0ec49f;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Imagen de producto/servicio arriba de la card */
-.service-card .card-img-top{
-    aspect-ratio: 16 / 9;       /* mantiene proporción */
-    object-fit: cover;          /* recorta sin deformar */
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    background: #0f0f0f;        /* por si tarda en cargar */
+.icono {
+    width: 56px;
+    height: 56px;
 }
 
 

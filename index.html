@@ -28,13 +28,17 @@
           <div id="mainNav" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto font-bankgothic align-items-end align-items-lg-center gap-0 gap-lg-2">
               <li class="nav-item text-center"><a class="nav-link text-light active" href="index.html">Inicio</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="views/nosotros.html">Nosotros</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="views/servicios.html">Servicios</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="views/contacto.html">Contacto</a></li>
+              <li class="nav-item text-center"><a class="nav-link text-light" href="views/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item text-center"><a class="nav-link text-light" href="views/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item text-center"><a class="nav-link text-light" href="views/contacto.html">Contacto</a>
+              </li>
               
               <!-- Acciones -->
               <li class="nav-item text-center">
-                <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="views/usuario/iniciar-sesion.html">
+                <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0"
+                   href="views/usuario/iniciar-sesion.html">
                   <i class="bi bi-person"></i> Iniciar Sesión
                 </a>
               </li>
@@ -42,33 +46,6 @@
                 <a class="btn btn-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="admin/iniciar-sesion.html">
                   <i class="bi bi-speedometer2"></i> Admin
                 </a>
-              </li>
-              
-              <!-- Usuario -->
-              <li class="nav-item dropdown ms-lg-2">
-                <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-light justify-content-center"
-                   href="#" data-bs-toggle="dropdown">
-                  <img src="assets/img/ricardo.webp" alt="Avatar" class="navbar-avatar">
-                  <span  id="navUserName">Mi cuenta</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow border-light">
-                  <li>
-                    <a class="dropdown-item" href="views/usuario/perfil.html">
-                      <i class="bi bi-person-circle me-2"></i> Ver perfil
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="views/usuario/suscripcion.html">
-                      <i class="bi bi-speedometer2 me-2"></i> Mi suscripciones
-                    </a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item text-danger" href="#" id="btnLogout">
-                      <i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -81,9 +58,8 @@
         <div class="container">
           <div class="row align-items-center g-4">
             <div class="col-lg-8">
-              <h1 class="font-bankgothic fw-bold mb-3">
-                Presencia digital que <span class="text-turquesa">vende</span>.
-              </h1>
+              <h1 class="font-bankgothic">Servicios web, <span
+                class="text-turquesa">rápidos y sin vueltas</span>.</h1>
               <p class="text-blanco">
                 Sitios, landings y mantenimiento continuo para pymes y emprendedores. Menos humo, más resultados
                 medibles.
@@ -114,49 +90,64 @@
         </div>
       </section>
       
-      <!-- SERVICIOS DESTACADOS -->
       <section class="py-5">
         <div class="container">
           <header class="mb-4">
             <h2 class="font-bankgothic fw-bold fs-2">Servicios destacados</h2>
-            <p class="text-secondary mb-0">Elegidos por pymes y emprendedores para despegar su presencia online.</p>
+            <p class="text-gris mb-0">Elegidos por pymes y emprendedores para despegar su presencia online.</p>
           </header>
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-              <article class="card h-100 bg-azul text-light border-light shadow-sm">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="assets/img/servicios/producto.png"
+                     class="card-img-top" alt="Mockup de un sitio institucional"
+                     loading="lazy" decoding="async">
                 <div class="card-body">
-                  <i class="bi bi-window-sidebar display-6 text-turquesa"></i>
-                  <h3 class="h5 mt-3">Sitio institucional</h3>
-                  <p class="text-blanco">Secciones clave (inicio, servicios, nosotros, contacto) y blog opcional.</p>
-                  <a class="btn btn-turquesa" href="views/servicios.html">Ver alcance</a>
+                  <h3 class="font-bankgothic fs-4">Sitio institucional</h3>
+                  <p class="text-blanco">Páginas informativas (inicio, servicios, nosotros, contacto) y blog
+                    opcional.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$149.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mInst">Ver más
+                  </button>
                 </div>
               </article>
             </div>
+            
             <div class="col-md-6 col-lg-4">
-              <article class="card h-100 bg-azul text-light border-light shadow-sm">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="assets/img/servicios/producto2.png"
+                     class="card-img-top" alt="Landing page enfocada en conversión"
+                     loading="lazy" decoding="async">
                 <div class="card-body">
-                  <i class="bi bi-megaphone display-6 text-turquesa"></i>
-                  <h3 class="h5 mt-3">Landing / Maquetación</h3>
-                  <p class="text-blanco">Enfoque en conversión, ideal para campañas o lanzamientos.</p>
-                  <a class="btn btn-turquesa" href="views/servicios.html">Ver más</a>
+                  <h3 class="font-bankgothic fs-4">Landing / Maquetación</h3>
+                  <p class="text-blanco">Una página enfocada en conversión para campañas o lanzamientos.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$89.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mLanding">Ver
+                    más
+                  </button>
                 </div>
               </article>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 bg-azul text-light border-light shadow-sm">
+            
+            <div class="col-md-6 col-lg-4" id="cms">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="assets/img/servicios/producto3.png"
+                     class="card-img-top" alt="Panel de administración de un CMS moderno"
+                     loading="lazy" decoding="async">
                 <div class="card-body">
-                  <i class="bi bi-gear-wide-connected display-6 text-turquesa"></i>
-                  <h3 class="h5 mt-3">Implementación CMS</h3>
-                  <p class="text-blanco">Montaje y estructura para que edites tu contenido sin fricción.</p>
-                  <a class="btn btn-turquesa" href="views/servicios.html">Ver alcance</a>
+                  <h3 class="font-bankgothic fs-4">Implementación CMS</h3>
+                  <p class="text-blanco">Montaje y ajustes de CMS para que edites tu contenido sin fricción.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$119.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mCMS">Ver más
+                  </button>
                 </div>
               </article>
             </div>
+          
           </div>
         </div>
       </section>
       
-      <!-- CTA FINAL -->
       <section class="py-5 bg-gradient-dark text-light">
         <div class="container">
           <div class="row g-4 align-items-center">
@@ -179,9 +170,10 @@
     <footer class="py-4 bg-black border-top border-secondary">
       <div class="container">
         <div class="row g-4 align-items-center">
-          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
-            <a class="navbar-brand font-quantum pt-0 fs-2" href="index.html">
-              <img src="assets/img/logo.png" alt="logo LiliEstudio" class="img-fluid w-75"/>
+          <div class="col-12 col-lg-4">
+            <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
+               href="index.html">
+              <img src="assets/img/logo.png" alt="logo" class="img-fluid w-50">
             </a>
           </div>
           <div class="col-12 col-lg-8">
@@ -205,6 +197,62 @@
         </div>
       </div>
     </footer>
+    
+    <!-- MODALES -->
+    <div class="modal fade" id="mInst" tabindex="-1" aria-labelledby="mInstLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-azul text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="mInstLabel">Sitio institucional — Alcance</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-blanco">4–6 secciones, responsive, contacto con validación, accesibilidad base y
+              performance.</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-turquesa" href="views/planes.html">Ver planes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="mLanding" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-azul text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Landing / Maquetación — Alcance</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-blanco">
+            <p class="text-blanco">Sección hero, beneficios, prueba social, CTA, formulario o link a WhatsApp.</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-turquesa" href="views/planes.html">Ver planes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="mCMS" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-azul text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Implementación CMS — Alcance</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-blanco">
+            Setup base, estructura de contenidos y guías para edición segura.
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-turquesa" href="views/planes.html">Ver planes</a>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>

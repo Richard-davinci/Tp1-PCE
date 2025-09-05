@@ -32,24 +32,12 @@
               <li class="nav-item text-center"><a class="nav-link text-light" href="../views/servicios.html">Servicios</a></li>
               <li class="nav-item text-center"><a class="nav-link text-light" href="../views/contacto.html">Contacto</a></li>
               
-              <!-- Acciones -->
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="usuario/iniciar-sesion.html">
-                  <i class="bi bi-person"></i> Iniciar Sesión
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="btn btn-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="../admin/admin.html">
-                  <i class="bi bi-speedometer2"></i> Admin
-                </a>
-              </li>
-              
               <!-- Usuario -->
               <li class="nav-item dropdown ms-lg-2">
                 <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-light justify-content-center"
                    href="#" data-bs-toggle="dropdown">
                   <img src="../assets/img/ricardo.webp" alt="Avatar" class="navbar-avatar">
-                  <span  id="navUserName">Mi cuenta</span>
+                  <span id="navUserName">Mi cuenta</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow border-light">
                   <li>
@@ -74,104 +62,206 @@
           </div>
         </div>
       </nav>
-    
     </header>
-    
-    <!-- MAIN -->
-    <main class="py-5 bg-gradient-dark text-light">
-      <div class="container">
-        <header class="d-flex flex-wrap flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-          <div>
-            <h1 class="fs-2 font-bankgothic fw-bold">Elegí tu plan</h1>
-            <p class="text-secondary mb-0">Podés cambiarlo cuando quieras. Precios en ARS.</p>
-          </div>
-          <div class="d-flex align-items-center gap-2">
-            <span class="small text-secondary">Facturación</span>
-            <div class="btn-group" role="group" aria-label="Selector de facturación">
-              <input type="radio" class="btn-check" name="billing" id="billMonthly" autocomplete="off" checked>
-              <label class="btn btn-outline-light" for="billMonthly">Mensual</label>
-              <input type="radio" class="btn-check" name="billing" id="billYearly" autocomplete="off">
-              <label class="btn btn-outline-light" for="billYearly">Anual <span class="badge text-bg-success ms-1">-10%</span></label>
+
+    <main>
+      <section class="py-5 bg-gradient-dark text-light border-bottom">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h1 class="fs-1 font-bankgothic fw-bold mb-2">
+                Planes pensados para arrancar, crecer y escalar
+              </h1>
+              <p class="lead text-blanco mb-0">
+                Elegí <strong>Mensual</strong> para empezar sin compromiso o <strong>Anual</strong> con
+                <span class="text-turquesa">10% OFF</span>. Podés cambiar de plan cuando quieras. Precios en ARS.
+              </p>
             </div>
           </div>
-        </header>
-        
-        <div class="row g-4" id="plansGrid" data-billing="monthly" aria-live="polite">
-          <!-- Starter -->
-          <div class="col-md-6 col-lg-4">
-            <article class="card h-100 bg-dark text-light border-light shadow-sm" data-plan="Starter" data-price="29990">
-              <div class="card-body d-flex flex-column">
-                <h2 class="h5">Starter</h2>
-                <p class="text-secondary">Ideal para arrancar con presencia sólida.</p>
-                <ul class="list-unstyled small text-secondary flex-grow-1">
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Sitio institucional básico</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>1 landing incluida</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Mantenimiento base</li>
-                </ul>
-                <p class="h4 mt-2">
-                  <span class="price-label" aria-label="Precio">$29.990</span>
-                  <span class="small text-secondary price-period">/ mes</span>
-                </p>
-                <div class="mt-3">
-                  <a class="btn btn-turquesa w-100 choose-plan" href="usuario/iniciar-sesion.html" aria-label="Elegir Starter">
-                    Elegir plan
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Pro -->
-          <div class="col-md-6 col-lg-4">
-            <article class="card h-100 bg-dark text-light border-light shadow-sm" data-plan="Pro" data-price="69990">
-              <div class="card-body d-flex flex-column">
-                <h2 class="h5">Pro</h2>
-                <p class="text-secondary">Para crecer con más features y soporte.</p>
-                <ul class="list-unstyled small text-secondary flex-grow-1">
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Starter</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>SEO on-page</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>2 landings / mes</li>
-                </ul>
-                <p class="h4 mt-2">
-                  <span class="price-label">$69.990</span>
-                  <span class="small text-secondary price-period">/ mes</span>
-                </p>
-                <div class="mt-3">
-                  <a class="btn btn-turquesa w-100 choose-plan" href="usuario/iniciar-sesion.html" aria-label="Elegir Pro">
-                    Elegir plan
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Premium -->
-          <div class="col-md-6 col-lg-4">
-            <article class="card h-100 bg-dark text-light border-light shadow-sm" data-plan="Premium" data-price="149990">
-              <div class="card-body d-flex flex-column">
-                <h2 class="h5">Premium</h2>
-                <p class="text-secondary">Para marcas que necesitan iterar fuerte.</p>
-                <ul class="list-unstyled small text-secondary flex-grow-1">
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Pro</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Soporte prioritario</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Reportes mensuales</li>
-                </ul>
-                <p class="h4 mt-2">
-                  <span class="price-label">$149.990</span>
-                  <span class="small text-secondary price-period">/ mes</span>
-                </p>
-                <div class="mt-3">
-                  <a class="btn btn-turquesa w-100 choose-plan" href="usuario/iniciar-sesion.html" aria-label="Elegir Premium">
-                    Elegir plan
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
-        
-        <p class="text-secondary small mt-3">Los precios son orientativos y pueden variar según alcance.</p>
-      </div>
+      </section>
+      
+      <!-- PLANES -->
+      <section class="py-5">
+        <div class="container">
+          <div class="d-flex flex-wrap flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+            <div>
+              <h2 class="fs-2 font-bankgothic fw-bold mb-0">Elegí tu plan</h2>
+              <p class="text-secondary mb-0">Compará opciones y contratá el que mejor se adapte.</p>
+            </div>
+            
+            <ul class="nav tabs-segment bg-azul rounded-pill p-1" id="billingTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-mensual"
+                        data-bs-toggle="tab" data-bs-target="#planes-mensual"
+                        type="button" role="tab" aria-controls="planes-mensual" aria-selected="true">
+                  Mensual
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-anual"
+                        data-bs-toggle="tab" data-bs-target="#planes-anual"
+                        type="button" role="tab" aria-controls="planes-anual" aria-selected="false">
+                  Anual <span class="tab-chip ms-2">-10%</span>
+                </button>
+              </li>
+            </ul>
+          
+          </div>
+          
+          <div class="tab-content">
+            <!-- Mensual -->
+            <div class="tab-pane fade show active" id="planes-mensual" role="tabpanel" aria-labelledby="tab-mensual">
+              <div class="row g-4">
+                <!-- Starter -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Starter</h3>
+                      <p class="text-secondary">Ideal para arrancar con presencia sólida.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Sitio institucional básico</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>1 landing incluida</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Mantenimiento base</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $29.990 <span class="small text-secondary">/ mes</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Starter (mensual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <!-- Pro -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Pro</h3>
+                      <p class="text-secondary">Para crecer con más features y soporte.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Starter</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>SEO on-page</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>2 landings / mes</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $69.990 <span class="small text-secondary">/ mes</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Pro (mensual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <!-- Premium -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Premium</h3>
+                      <p class="text-secondary">Para marcas que necesitan iterar fuerte.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Pro</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Soporte prioritario</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Reportes mensuales</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $149.990 <span class="small text-secondary">/ mes</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Premium (mensual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Anual (-10%) -->
+            <div class="tab-pane fade" id="planes-anual" role="tabpanel" aria-labelledby="tab-anual">
+              <div class="row g-4">
+                <!-- Starter -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Starter</h3>
+                      <p class="text-secondary">Ahorro anual con lo esencial para empezar.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Sitio institucional básico</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>1 landing incluida</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Mantenimiento base</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $323.892 <span class="small text-secondary">/ año (-10%)</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Starter (anual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <!-- Pro -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Pro</h3>
+                      <p class="text-secondary">Ahorro para crecer con SEO y más landings.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Starter</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>SEO on-page</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>2 landings / mes</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $755.892 <span class="small text-secondary">/ año (-10%)</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Pro (anual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <!-- Premium -->
+                <div class="col-md-6 col-lg-4">
+                  <article class="card h-100 bg-azul text-light border-light shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                      <h3 class="h5">Premium</h3>
+                      <p class="text-secondary">Máximo valor con soporte prioritario y reportes.</p>
+                      <ul class="list-unstyled small text-secondary flex-grow-1">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Todo lo de Pro</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Soporte prioritario</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i>Reportes mensuales</li>
+                      </ul>
+                      <p class="h4 mt-2">
+                        $1.619.892 <span class="small text-secondary">/ año (-10%)</span>
+                      </p>
+                      <div class="mt-3">
+                        <a class="btn btn-turquesa w-100" href="usuario/iniciar-sesion.html" aria-label="Elegir Premium (anual)">
+                          Elegir plan
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-secondary small mt-3">Los precios son orientativos y pueden variar según alcance.</p>
+        </div>
+      </section>
     </main>
     
     <!-- FOOTER -->
@@ -202,44 +292,8 @@
       </div>
     </footer>
     
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+    <!-- Solo el bundle de Bootstrap para tabs -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    
-    <!-- Lógica: toggle mensual/anual con -10% anual -->
-    <script>
-      (function(){
-        const grid = document.getElementById('plansGrid');
-        const toARS = n => n.toLocaleString('es-AR');
-        
-        function setMonthly(){
-          grid.dataset.billing = 'monthly';
-          document.querySelectorAll('#plansGrid [data-price]').forEach(card=>{
-            const base = Number(card.dataset.price || 0);
-            card.querySelector('.price-label').textContent = '$' + toARS(base);
-            card.querySelector('.price-period').textContent = ' / mes';
-          });
-        }
-        
-        function setYearly(){
-          grid.dataset.billing = 'yearly';
-          document.querySelectorAll('#plansGrid [data-price]').forEach(card=>{
-            const base = Number(card.dataset.price || 0); // precio mensual
-            const anual = Math.round(base * 12 * 0.9);   // 12 meses con 10% off
-            card.querySelector('.price-label').textContent = '$' + toARS(anual);
-            card.querySelector('.price-period').textContent = ' / año (-10%)';
-          });
-        }
-        
-        const billMonthly = document.getElementById('billMonthly');
-        const billYearly = document.getElementById('billYearly');
-        billMonthly.addEventListener('change', setMonthly);
-        billYearly.addEventListener('change', setYearly);
-        
-        // init
-        setMonthly();
-      })();
-    </script>
-    
     <script src="../assets/js/main.js"></script>
   </body>
 </html>

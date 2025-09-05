@@ -12,11 +12,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <!-- NAV -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
         <div class="container">
-          <a class="navbar-brand d-flex justify-content-sm-center justify-content-lg-start align-items-center m-auto"
+          <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
              href="../index.html">
             <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75">
           </a>
@@ -34,19 +33,6 @@
               <li class="nav-item text-center"><a class="nav-link text-light"
                                                   href="../views/servicios.html">Servicios</a></li>
               <li class="nav-item text-center"><a class="nav-link text-light active" href="../views/contacto.html">Contacto</a>
-              </li>
-              
-              <!-- Acciones -->
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0"
-                   href="usuario/iniciar-sesion.html">
-                  <i class="bi bi-person"></i> Iniciar Sesión
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="btn btn-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="../admin/admin.html">
-                  <i class="bi bi-speedometer2"></i> Admin
-                </a>
               </li>
               
               <!-- Usuario -->
@@ -81,23 +67,27 @@
           </div>
         </div>
       </nav>
-    
     </header>
     
-    <!-- MAIN -->
-    <main class="py-5 bg-gradient-dark text-light">
-      <div class="container">
-        <div class="mb-4 text-center">
-          <h1 class="fs-1 font-bankgothic fw-bold">Contacto</h1>
+    <main>
+      <section class="hero-contacto bg-gradient-dark text-light d-flex align-items-center">
+        <div class="container py-5">
+          <h1 class="fs-1 fw-bold font-bankgothic mb-3">Ponete en contacto</h1>
+          <p class="lead mb-4">Estamos para ayudarte a hacer crecer tu proyecto digital.</p>
+        </div>
+      </section>
+      <section class=" py-5 container">
+        <div class="mb-4">
+          <h2 class="fs-2 font-bankgothic fw-bold">Contacto</h2>
           <p>Contanos qué necesitás y te respondemos a la brevedad.</p>
         </div>
         
         <div class="row g-4">
-          <!-- FORMULARIO -->
           <div class="col-md-6">
-            <div class="card bg-dark text-light border-light h-100">
+            <div class="card bg-azul text-light border-light h-100">
               <div class="card-body">
-                <form action="#" method="POST">
+                <h3 class="fs-3 font-bankgothic fw-bold mb-3">Escribinos</h3>
+                <form id="formulario" action="#" method="POST">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label for="nombre" class="form-label">Nombre y apellido</label>
@@ -131,67 +121,48 @@
             </div>
           </div>
           
-          <!-- INFO EMPRESA -->
           <div class="col-md-6">
-            <div class="card bg-dark text-light border-light h-100">
+            <div class="card bg-azul text-light border-light h-100">
               <div class="card-body">
-                <h2 class="fs-4 font-bankgothic fw-bold mb-3">Datos de la empresa</h2>
+                <h3 class="fs-3 font-bankgothic fw-bold mb-3">Datos de la empresa</h3>
                 <ul class="list-unstyled mb-0">
-                  <li><i class="bi bi-geo-alt me-2 text-turquesa"></i> Calle Falsa 123, La Plata</li>
-                  <li><i class="bi bi-telephone me-2 text-turquesa"></i> +54 221 555-5555</li>
+                  <li><i class="bi bi-geo-alt me-2 text-turquesa"></i> Calle 55 Nro 681 Dpto 13D, La Plata</li>
+                  <li><i class="bi bi-telephone me-2 text-turquesa"></i> +54 221 200-3474</li>
                   <li><i class="bi bi-envelope me-2 text-turquesa"></i> contacto@lilitech.shop</li>
                   <li><i class="bi bi-clock me-2 text-turquesa"></i> Lunes a Viernes de 9 a 18 hs</li>
                 </ul>
                 <div class="mt-3">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52416.80675560805!2d-57.95603716803905!3d-34.92047001681011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1709766266575!5m2!1ses!2sar"
-                    width="100%"
-                    height="200"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.4695510856931!2d-57.94820616201116!3d-34.91867364365206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e700223eb265%3A0xe762fdb65ce3bcdc!2sMigas%20Argentinas!5e0!3m2!1ses!2sar!4v1757091381018!5m2!1ses!2sar" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     
-    <!-- FOOTER -->
     <footer class="py-4 bg-black border-top border-secondary">
       <div class="container">
         <div class="row g-4 align-items-center">
-          <!-- Logo -->
-          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
-            <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
-              <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75">
+          <div class="col-12 col-lg-4">
+            <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
+               href="../index.html">
+              <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-50">
             </a>
           </div>
-          <!-- Información personal -->
           <div class="col-12 col-lg-8">
             <ul
-              class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
-              <li>
-                <i class="bi bi-person me-1 text-accent" aria-hidden="true"></i>
-                Ricardo Rodolfo Garcia
-              </li>
-              <li>
-                <i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años
-              </li>
-              <li>
-                <i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i>
+              class="list-unstyled mb-0 text-blanco d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+              <li><i class="bi bi-person me-1 text-accent"></i> Ricardo Rodolfo Garcia</li>
+              <li><i class="bi bi-calendar3 me-1 text-accent"></i> 37 años</li>
+              <li><i class="bi bi-envelope me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a>
               </li>
-              <li>
-                <i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i>
+              <li><i class="bi bi-instagram me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata"
                    target="_blank" rel="noopener">@lilitech_laplata</a>
               </li>
-              <li>
-                <i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i>
+              <li><i class="bi bi-globe2 me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank"
                    rel="noopener">lilitech.shop</a>
               </li>
@@ -201,7 +172,7 @@
       </div>
     </footer>
     
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
     <script src="../assets/js/main.js"></script>

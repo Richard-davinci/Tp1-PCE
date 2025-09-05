@@ -12,12 +12,11 @@
     <link href="../assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <!-- NAV -->
     <header>
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
           <div class="container">
-            <a class="navbar-brand d-flex justify-content-sm-center justify-content-lg-start align-items-center m-auto"
+            <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
                href="../index.html">
               <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75">
             </a>
@@ -36,19 +35,6 @@
                 </li>
                 <li class="nav-item text-center"><a class="nav-link text-light"
                                                     href="../views/contacto.html">Contacto</a></li>
-                
-                <!-- Acciones -->
-                <li class="nav-item text-center">
-                  <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0"
-                     href="usuario/iniciar-sesion.html">
-                    <i class="bi bi-person"></i> Iniciar Sesión
-                  </a>
-                </li>
-                <li class="nav-item text-center">
-                  <a class="btn btn-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="../admin/admin.html">
-                    <i class="bi bi-speedometer2"></i> Admin
-                  </a>
-                </li>
                 
                 <!-- Usuario -->
                 <li class="nav-item dropdown ms-lg-2">
@@ -87,141 +73,149 @@
     
     </header>
     
-    <!-- MAIN -->
-    <main class="py-5 bg-gradient-dark text-light">
-      <div class="container">
-        <header class="mb-4">
-          <h1 class="fs-2 font-bankgothic fw-bold">Servicios</h1>
-          <p class="text-secondary mb-0">Seis servicios clave para tu presencia digital.</p>
-        </header>
-        
-        <div class="row g-4">
-          <!-- Sitio institucional -->
-          <div class="col-md-6 col-lg-4" id="inst">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Mockup de un sitio institucional"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">Sitio institucional</h2>
-                <p class="text-blanco">Páginas informativas (inicio, servicios, nosotros, contacto) y blog opcional.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$149.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mInst">Ver más
-                </button>
-              </div>
-            </article>
+    <main>
+      <section class="py-5 bg-gradient-dark text-light border-bottom">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h1 class="fs-1 font-bankgothic fw-bold mb-2">
+                Servicios web que mueven la aguja
+              </h1>
+              <p class="text-blanco mb-4">
+                Elegí el alcance que mejor te calza: sitio institucional, landing,
+                CMS, formularios, SEO y mantenimiento.
+              </p>
+            </div>
           </div>
-          
-          <!-- Landing / Maquetación -->
-          <div class="col-md-6 col-lg-4" id="landing">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Landing page enfocada en conversión"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">Landing / Maquetación</h2>
-                <p class="text-blanco">Una página enfocada en conversión para campañas o lanzamientos.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$89.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mLanding">Ver
-                  más
-                </button>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Implementación CMS -->
-          <div class="col-md-6 col-lg-4" id="cms">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Panel de administración de un CMS moderno"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">Implementación CMS</h2>
-                <p class="text-blanco">Montaje y ajustes de CMS para que edites tu contenido sin fricción.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$119.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mCMS">Ver más
-                </button>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Formulario web -->
-          <div class="col-md-6 col-lg-4" id="form">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Formulario web con validaciones"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">Formulario web</h2>
-                <p class="text-blanco">Diseño y validación de formularios accesibles con envío básico.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$49.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mForm">Ver más
-                </button>
-              </div>
-            </article>
-          </div>
-          
-          <!-- SEO on-page -->
-          <div class="col-md-6 col-lg-4" id="seo">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Reportes y métricas de SEO on-page"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">SEO on-page</h2>
-                <p class="text-blanco">Etiquetas, estructura, performance y accesibilidad para posicionar mejor.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$59.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mSEO">Ver más
-                </button>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Mantenimiento mensual -->
-          <div class="col-md-6 col-lg-4" id="mant">
-            <article class="card bg-azul text-light border-light shadow-sm service-card">
-              <img src="../assets/img/servicios/producto.png"
-                   class="card-img-top" alt="Mantenimiento mensual de sitios"
-                   loading="lazy" decoding="async">
-              <div class="card-body">
-                <h2 class="h5 mt-3">Mantenimiento mensual</h2>
-                <p class="text-blanco">Actualizaciones, monitoreo básico y soporte con SLA acordado.</p>
-                <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$39.990</strong></p>
-                <button class="btn btn-outline-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#mMant">Ver más
-                </button>
-              </div>
-            </article>
-          </div>
-        
-        
         </div>
-      </div>
+      </section>
+      
+      <section class="py-5">
+        <div class="container">
+          <div class="mb-4">
+            <h2 class="fs-2 font-bankgothic fw-bold">Servicios</h2>
+            <p class="text-gris mb-0">Servicios clave para tu presencia digital.</p>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto.png"
+                     class="card-img-top" alt="Mockup de un sitio institucional"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">Sitio institucional</h3>
+                  <p class="text-blanco">Páginas informativas (inicio, servicios, nosotros, contacto) y blog
+                    opcional.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$149.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver más
+                  </button>
+                </div>
+              </article>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto2.png"
+                     class="card-img-top" alt="Landing page enfocada en conversión"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">Landing / Maquetación</h3>
+                  <p class="text-blanco">Una página enfocada en conversión para campañas o lanzamientos.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$89.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver
+                    más
+                  </button>
+                </div>
+              </article>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" id="cms">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto3.png"
+                     class="card-img-top" alt="Panel de administración de un CMS moderno"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">Implementación CMS</h3>
+                  <p class="text-blanco">Montaje y ajustes de CMS para que edites tu contenido sin fricción.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$119.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver más
+                  </button>
+                </div>
+              </article>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" id="form">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto3.png"
+                     class="card-img-top" alt="Formulario web con validaciones"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">Formulario web</h3>
+                  <p class="text-blanco">Diseño y validación de formularios accesibles con envío básico.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$49.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver más
+                  </button>
+                </div>
+              </article>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" id="seo">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto.png"
+                     class="card-img-top" alt="Reportes y métricas de SEO on-page"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">SEO on-page</h3>
+                  <p class="text-blanco">Etiquetas, estructura, performance y accesibilidad para posicionar mejor.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$59.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver más
+                  </button>
+                </div>
+              </article>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" id="mant">
+              <article class="card bg-azul text-light border-light shadow-sm service-card">
+                <img src="../assets/img/servicios/producto2.png"
+                     class="card-img-top" alt="Mantenimiento mensual de sitios"
+                     loading="lazy" decoding="async">
+                <div class="card-body">
+                  <h3 class="font-bankgothic fs-4">Mantenimiento mensual</h3>
+                  <p class="text-blanco">Actualizaciones, monitoreo básico y soporte con SLA acordado.</p>
+                  <p class="mb-0 text-blanco"><i class="bi bi-cash-coin me-1"></i>Desde <strong>$39.990</strong></p>
+                  <button class="btn btn-turquesa mt-3" data-bs-toggle="modal" data-bs-target="#modal">Ver más
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     
-    <!-- FOOTER -->
     <footer class="py-4 bg-black border-top border-secondary">
       <div class="container">
         <div class="row g-4 align-items-center">
-          <!-- Logo -->
-          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
-            <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
-              <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75">
+          <div class="col-12 col-lg-4">
+            <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
+               href="../index.html">
+              <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-50">
             </a>
           </div>
-          <!-- Info -->
           <div class="col-12 col-lg-8">
             <ul
-              class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
-              <li><i class="bi bi-person me-1 text-accent" aria-hidden="true"></i> Ricardo Rodolfo Garcia</li>
-              <li><i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años</li>
-              <li><i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i>
+              class="list-unstyled mb-0 text-blanco d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+              <li><i class="bi bi-person me-1 text-accent"></i> Ricardo Rodolfo Garcia</li>
+              <li><i class="bi bi-calendar3 me-1 text-accent"></i> 37 años</li>
+              <li><i class="bi bi-envelope me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a>
               </li>
-              <li><i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i>
+              <li><i class="bi bi-instagram me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata"
                    target="_blank" rel="noopener">@lilitech_laplata</a>
               </li>
-              <li><i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i>
+              <li><i class="bi bi-globe2 me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank"
                    rel="noopener">lilitech.shop</a>
               </li>
@@ -231,107 +225,18 @@
       </div>
     </footer>
     
-    <!-- MODALES (alcance) -->
-    <div class="modal fade" id="mInst" tabindex="-1" aria-labelledby="mInstLabel" aria-hidden="true">
+    <!-- MODALES -->
+    <div class="modal fade" id="modal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-azul text-light border-light">
           <div class="modal-header">
-            <h2 class="modal-title h5" id="mInstLabel">Sitio institucional — Alcance</h2>
+            <h2 class="modal-title font-bankgothic fs-4" id="mInstLabel">Sitio institucional — Alcance</h2>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Cerrar"></button>
           </div>
-          <div class="modal-body text-secondary">
-            4–6 secciones, responsive, contacto con validación, accesibilidad base y performance.
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-turquesa" href="planes.html">Ver planes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="mLanding" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-azul text-light border-light">
-          <div class="modal-header">
-            <h2 class="modal-title h5">Landing / Maquetación — Alcance</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-secondary">
-            Sección hero, beneficios, prueba social, CTA, formulario o link a WhatsApp.
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-turquesa" href="planes.html">Ver planes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="mCMS" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-azul text-light border-light">
-          <div class="modal-header">
-            <h2 class="modal-title h5">Implementación CMS — Alcance</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-secondary">
-            Setup base, estructura de contenidos y guías para edición segura.
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-turquesa" href="planes.html">Ver planes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="mForm" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-azul text-light border-light">
-          <div class="modal-header">
-            <h2 class="modal-title h5">Formulario web — Alcance</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-secondary">
-            Campos personalizados, validaciones y estados de error/acierto accesibles.
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-turquesa" href="planes.html">Ver planes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="mSEO" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-azul text-light border-light">
-          <div class="modal-header">
-            <h2 class="modal-title h5">SEO on-page — Alcance</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-secondary">
-            Headings, meta, estructura semántica, rendimiento y accesibilidad.
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-turquesa" href="planes.html">Ver planes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="mMant" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-azul text-light border-light">
-          <div class="modal-header">
-            <h2 class="modal-title h5">Mantenimiento mensual — Alcance</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-secondary">
-            Actualizaciones, respaldo básico, monitoreo y reportes mensuales.
+          <div class="modal-body text-gris">
+            <p class="text-blanco">4–6 secciones, responsive, contacto con validación, accesibilidad base y
+              performance.</p>
           </div>
           <div class="modal-footer">
             <a class="btn btn-turquesa" href="planes.html">Ver planes</a>

@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>LiliEstudio — Mi perfil</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico" />
-    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico"/>
+    <link href="../../assets/css/style.css" rel="stylesheet"/>
     
     <style>
       /* Estilos puntuales de esta página */
-      .avatar-lg{ width:120px; height:120px; border-radius:50%; object-fit:cover; }
-      .card-section + .card-section{ margin-top:1rem; }
-      .readonly-value{ color:#ddd; }
+      .avatar-lg {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+      .card-section + .card-section {
+        margin-top: 1rem;
+      }
+      
+      .readonly-value {
+        color: #ddd;
+      }
     </style>
   </head>
   <body>
@@ -22,7 +34,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
         <div class="container">
-          <a class="navbar-brand d-flex justify-content-sm-center justify-content-lg-start align-items-center m-auto"
+          <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
              href="../../index.html">
             <img src="../../assets/img/logo.png" alt="logo" class="img-fluid w-75">
           </a>
@@ -34,44 +46,31 @@
           
           <div id="mainNav" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto font-bankgothic align-items-end align-items-lg-center gap-0 gap-lg-2">
-              <li class="nav-item text-center"><a class="nav-link text-light" href="../../index.html">Inicio</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="../nosotros.html">Nosotros</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="../servicios.html">Servicios</a></li>
-              <li class="nav-item text-center"><a class="nav-link text-light" href="../contacto.html">Contacto</a></li>
-              
-              <!-- Acciones -->
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="iniciar-sesion.html">
-                  <i class="bi bi-person"></i> Iniciar Sesión
-                </a>
+              <li class="nav-item text-center"><a class="nav-link text-light " href="../../index.html">Inicio</a></li>
+              <li class="nav-item text-center"><a class="nav-link text-light"
+                                                  href="../../views/nosotros.html">Nosotros</a></li>
+              <li class="nav-item text-center"><a class="nav-link text-light active" href="../../views/servicios.html">Servicios</a>
               </li>
-              <li class="nav-item text-center">
-                <a class="btn btn-turquesa ms-0 ms-lg-2 w-100 w-lg-auto mt-2 mt-lg-0" href="../../admin/admin.html">
-                  <i class="bi bi-speedometer2"></i> Admin
-                </a>
-              </li>
+              <li class="nav-item text-center"><a class="nav-link text-light"
+                                                  href="../../views/contacto.html">Contacto</a></li>
               
-              <!-- Usuario -->
               <li class="nav-item dropdown ms-lg-2">
                 <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-light justify-content-center"
                    href="#" data-bs-toggle="dropdown">
                   <img src="../../assets/img/ricardo.webp" alt="Avatar" class="navbar-avatar">
-                  <span  id="navUserName">Mi cuenta</span>
+                  <span>Mi cuenta</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow border-light">
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow border-light bg-azul">
                   <li>
-                    <a class="dropdown-item" href="../views/perfil.html">
+                    <a class="dropdown-item " href="../usuario/perfil.html">
                       <i class="bi bi-person-circle me-2"></i> Ver perfil
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="suscripcion.html">
-                      <i class="bi bi-speedometer2 me-2"></i> Mi suscripciones
-                    </a>
+                    <hr class="dropdown-divider">
                   </li>
-                  <li><hr class="dropdown-divider"></li>
                   <li>
-                    <a class="dropdown-item text-danger" href="#" id="btnLogout">
+                    <a class="dropdown-item text-danger" href="#">
                       <i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión
                     </a>
                   </li>
@@ -81,163 +80,314 @@
           </div>
         </div>
       </nav>
-    
     </header>
     
     <!-- MAIN -->
-    <main class="py-5 bg-gradient-dark text-light">
-      <div class="container">
-        <header class="mb-4">
-          <h1 class="fs-2 font-bankgothic fw-bold mb-1">Mi perfil</h1>
-          <p class="text-secondary mb-0">Consultá tus datos y editá lo que necesites.</p>
-        </header>
+    <main>
+      <section class=" bg-gradient-dark text-light ">
+        <div class="container py-5">
+          <div class="mb-4">
+            <h1 class="fs-1 font-bankgothic fw-bold mb-1">Mi perfil</h1>
+            <p class="text-blanco mb-0">Consultá tus datos y editá lo que necesites.</p>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="card bg-azul text-light border-light card-section">
+                <div class="card-body text-center">
+                  <img src="../../assets/img/ricardo.webp" alt="Tu avatar"
+                       class="avatar-lg mx-auto mb-3 border border-secondary"/>
+                  <div class="d-grid gap-2">
+                    <label class="btn btn-turquesa mb-0">
+                      <i class="bi bi-image me-1"></i> Cambiar foto
+                      <input type="file" accept="image/*" hidden>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card bg-azul text-light border-light card-section">
+                <div class="card-body">
+                  <h2 class="fs-5 text-turquesa mb-3">Estado de la cuenta</h2>
+                  <ul class="list-unstyled mb-0 small">
+                    <li class="d-flex align-items-center justify-content-between">
+                      <span>Verificación de email</span>
+                      <span class="badge text-bg-success p-2">OK</span>
+                    </li>
+                  </ul>
+                  <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-turquesa" data-bs-toggle="modal" data-bs-target="#modalPassword">
+                      <i class="bi bi-shield-lock me-1"></i> Cambiar contraseña
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-8">
+              <div class="card bg-azul text-light border-light">
+                <div class="card-body pt-0">
+                  <ul class="nav tabs-underline justify-content-center mb-2" id="profileTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active font-bankgothic fs-5" id="ver-tab" data-bs-toggle="tab"
+                              data-bs-target="#ver" type="button" role="tab">Datos
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link font-bankgothic fs-5" id="editar-tab" data-bs-toggle="tab"
+                              data-bs-target="#editar" type="button" role="tab">Editar Datos
+                      </button>
+                    </li>
+                  </ul>
+                  
+                  <div class="tab-content" id="profileTabsContent">
+                    <div class="tab-pane fade show active" id="ver" role="tabpanel" aria-labelledby="ver-tab">
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <small class="text-turquesa">Nombre</small>
+                          <div class="readonly-value">Ricardo Rodolfo</div>
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-turquesa">Apellido</small>
+                          <div class="readonly-value">Garcia</div>
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-turquesa">Email</small>
+                          <div class="readonly-value">ricardo.garcia@davinci.edu.ar</div>
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-turquesa">Teléfono</small>
+                          <div class="readonly-value">+54 221 690-5085</div>
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-turquesa">Ciudad</small>
+                          <div class="readonly-value">La Plata</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="editar" role="tabpanel" aria-labelledby="editar-tab">
+                      <form class="row g-3 needs-validation" action="#" method="post" novalidate>
+                        <div class="col-md-6">
+                          <label class="form-label" for="fNombre">Nombre</label>
+                          <input id="fNombre" name="nombre" class="form-control" value="Ricardo Rodolfo" required>
+                          <div class="invalid-feedback">Ingresá tu nombre.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="fApellido">Apellido</label>
+                          <input id="fApellido" name="apellido" class="form-control" value="Garcia" required>
+                          <div class="invalid-feedback">Ingresá tu apellido.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="fEmail">Email</label>
+                          <input id="fEmail" name="email" type="email" class="form-control"
+                                 value="ricardo.garcia@davinci.edu.ar" required>
+                          <div class="invalid-feedback">Ingresá un email válido.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="fTelefono">Teléfono</label>
+                          <input id="fTelefono" name="telefono" class="form-control" value="+54 221 690-5085">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="fCiudad">Ciudad</label>
+                          <input id="fCiudad" name="ciudad" class="form-control" value="La Plata">
+                        </div>
+                        <div class="col-12 d-grid d-sm-flex gap-3 mt-2">
+                          <button class="btn btn-turquesa" type="submit">Guardar cambios</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div> <!-- /tab-content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+      <section class="container py-5 ">
+        <div class="mb-4">
+          <h1 class="fs-2 font-bankgothic fw-bold">Mi suscripción</h1>
+        </div>
         
         <div class="row g-4">
-          <!-- Col izquierda: Avatar + Estado -->
+          <!-- Col izquierda -->
           <div class="col-lg-4">
-            <div class="card bg-dark text-light border-light card-section">
-              <div class="card-body text-center">
-                <img id="avatarImg" src="../../assets/img/ricardo.webp" alt="Tu avatar" class="avatar-lg mx-auto d-block mb-3 border border-secondary" />
+            <!-- Resumen de suscripción -->
+            <div class="card bg-azul text-light border-light shadow-sm">
+              <div class="card-body">
+                <h2 class="fs-6 text-turquesa mb-1">Resumen de suscripción</h2>
+                
+                <div class="mb-3">
+                  <small class="text-turquesa d-block">Servicio</small>
+                  <p class="mb-1 fw-semibold">Hosting + Mantenimiento Arte-sano</p>
+                  
+                  <small class="text-turquesa d-block">Plan</small>
+                  <p class="mb-1" id="currentPlan">Pro mensual</p>
+                  
+                  <small class="text-turquesa d-block">Add-ons</small>
+                  <p class="mb-1">CDN • Backups diarios • Monitoreo 24/7 • Soporte prioritario</p>
+                  
+                  <small class="text-turquesa d-block">Dominio</small>
+                  <p class="mb-1">artesano-beer.com</p>
+                  
+                  <small class="text-turquesa d-block">Usuarios / Seats</small>
+                  <p class="mb-1">2 de 5 usados</p>
+                </div>
+                
+                <hr class="border-secondary">
+                
+                <div class="mb-3">
+                  <small class="text-turquesa d-block">Método de pago</small>
+                  <p class="mb-1">Mercado Pago — VISA •••• 1234</p>
+                  
+                  <small class="text-turquesa d-block">Próxima facturación</small>
+                  <p class="mb-1">05/08/2025 — <span id="currentBilling">$69.900</span></p>
+                  
+                  <span class="badge text-bg-success p-2">Activa</span>
+                </div>
+                
                 <div class="d-grid gap-2">
-                  <label class="btn btn-outline-turquesa mb-0">
-                    <i class="bi bi-image me-1"></i> Cambiar foto
-                    <input id="avatarInput" type="file" accept="image/*" hidden>
-                  </label>
-                  <button class="btn btn-outline-light" id="btnRemoveAvatar" type="button">
-                    <i class="bi bi-trash3 me-1"></i> Quitar foto
+                  <button class="btn btn-turquesa" data-bs-toggle="modal" data-bs-target="#modalChangePlan">
+                    Cambiar plan
+                  </button>
+                  <button class="btn btn-outline-turquesa" data-bs-toggle="modal" data-bs-target="#modalCancel">
+                    Cancelar suscripción
                   </button>
                 </div>
               </div>
             </div>
             
-            <div class="card bg-dark text-light border-light card-section">
+            
+            <div class="card bg-azul text-light border-light shadow-sm mt-3">
               <div class="card-body">
-                <h2 class="h6 text-secondary mb-3">Estado de la cuenta</h2>
+                <h2 class="fs-6 text-turquesa mb-3">Otros servicios activos</h2>
                 <ul class="list-unstyled mb-0 small">
-                  <li class="d-flex align-items-center justify-content-between">
-                    <span>Verificación de email</span>
-                    <span class="badge text-bg-success">OK</span>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary">
+                    <div>
+                      <i class="bi bi-megaphone me-2 text-turquesa"></i>
+                      Landing promocional
+                      <span class="d-block text-secondary small">Básico anual</span>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-outline-light">Ver</a>
                   </li>
-                  <li class="d-flex align-items-center justify-content-between mt-2">
-                    <span>2FA</span>
-                    <span class="badge text-bg-secondary">Pendiente</span>
+                  <li class="d-flex justify-content-between align-items-center py-2">
+                    <div>
+                      <i class="bi bi-cart-check me-2 text-turquesa"></i>
+                      Hosting ecommerce
+                      <span class="d-block text-secondary small">Pro mensual</span>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-outline-light">Ver</a>
                   </li>
                 </ul>
-                <div class="d-grid gap-2 mt-3">
-                  <button class="btn btn-outline-turquesa btn-sm" data-bs-toggle="modal" data-bs-target="#modalPassword">
-                    <i class="bi bi-shield-lock me-1"></i> Cambiar contraseña
-                  </button>
-                </div>
               </div>
             </div>
+          
+          
           </div>
           
-          <!-- Col derecha: Ver / Editar -->
+          <!-- Col derecha -->
           <div class="col-lg-8">
-            <div class="card bg-dark text-light border-light">
+            <!-- Detalle del servicio / plan -->
+            <div class="card bg-azul text-light border-light shadow-sm">
               <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <h2 class="h6 text-secondary mb-0">Datos personales</h2>
-                  <div class="d-flex gap-2">
-                    <button id="btnEdit" class="btn btn-turquesa btn-sm"><i class="bi bi-pencil-square me-1"></i> Editar</button>
-                    <button id="btnCancel" class="btn btn-outline-light btn-sm d-none">Cancelar</button>
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+                  <div>
+                    <h2 class="fs-5 text-turquesa mb-1">Detalle del servicio</h2>
+                    <ul class="mb-0 small text-blanco ps-3">
+                      <li>Infraestructura: VPS NVMe (2 vCPU, 4GB RAM), Nginx + PHP 8.2 + MariaDB</li>
+                      <li>Despliegues: CI/CD con releases sin downtime</li>
+                      <li>Seguridad: SSL/TLS, firewall, actualizaciones críticas</li>
+                      <li>Backups: diarios (30 días de retención) + restauración bajo demanda</li>
+                      <li>Monitoreo 24/7: uptime, recursos y alertas por email/WhatsApp</li>
+                      <li>Horas de mantenimiento incluidas: 3 h/mes</li>
+                    </ul>
                   </div>
+                  <a class="btn btn-turquesa mt-3 mt-md-0" href="../planes.html">Ver servicio</a>
                 </div>
-                
-                <!-- Vista solo lectura -->
-                <div id="profileView">
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Nombre</small>
-                      <div class="readonly-value" id="vNombre">Ricardo</div>
-                    </div>
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Apellido</small>
-                      <div class="readonly-value" id="vApellido">Garcia</div>
-                    </div>
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Email</small>
-                      <div class="readonly-value" id="vEmail">ricardo@example.com</div>
-                    </div>
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Teléfono</small>
-                      <div class="readonly-value" id="vTelefono">+54 221 555-5555</div>
-                    </div>
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Ciudad</small>
-                      <div class="readonly-value" id="vCiudad">La Plata</div>
-                    </div>
-                    <div class="col-md-6">
-                      <small class="text-secondary d-block">Instagram</small>
-                      <div class="readonly-value" id="vInstagram">@lilitech_laplata</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Form edición -->
-                <form id="profileForm" class="row g-3 d-none needs-validation" novalidate>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fNombre">Nombre</label>
-                    <input id="fNombre" class="form-control" required>
-                    <div class="invalid-feedback">Ingresá tu nombre.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fApellido">Apellido</label>
-                    <input id="fApellido" class="form-control" required>
-                    <div class="invalid-feedback">Ingresá tu apellido.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fEmail">Email</label>
-                    <input id="fEmail" type="email" class="form-control" required>
-                    <div class="invalid-feedback">Ingresá un email válido.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fTelefono">Teléfono</label>
-                    <input id="fTelefono" class="form-control">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fCiudad">Ciudad</label>
-                    <input id="fCiudad" class="form-control">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="fInstagram">Instagram</label>
-                    <input id="fInstagram" class="form-control" placeholder="@usuario">
-                  </div>
-                  <div class="col-12 d-grid d-sm-flex gap-3 mt-2">
-                    <button class="btn btn-turquesa" type="submit">Guardar cambios</button>
-                    <button class="btn btn-outline-light" type="button" id="btnCancel2">Cancelar</button>
-                  </div>
-                </form>
-              
               </div>
             </div>
+            
+            
+            <!-- Historial de pagos -->
+            <div class="card bg-azul text-light border-light shadow-sm mt-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="fs-5 text-turquesa mb-0">Historial de pagos</h2>
+                  <span class="badge text-bg-success">Al día</span>
+                </div>
+                
+                <div class="table-responsive mt-3">
+                  <table class="table table-striped align-middle  mb-0">
+                    <thead class="table-secondary">
+                      <tr>
+                        <th>Fecha</th>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                        <th>Factura</th>
+                      </tr>
+                    </thead>
+                    <tbody id="paymentsBody">
+                      <tr>
+                        <td>05/07/2025</td>
+                        <td>Hosting + Mantenimiento Arte-sano</td>
+                        <td>Plan Pro mensual</td>
+                        <td>$69.900</td>
+                        <td><span class="badge text-bg-success p-2">Pagado</span></td>
+                        <td><a class="btn btn-sm btn-turquesa" href="#">Descargar</a></td>
+                      </tr>
+                      <tr>
+                        <td>05/06/2025</td>
+                        <td>Hosting + Mantenimiento Arte-sano</td>
+                        <td>Plan Pro mensual</td>
+                        <td>$69.900</td>
+                        <td><span class="badge text-bg-success p-2">Pagado</span></td>
+                        <td><a class="btn btn-sm btn-turquesa" href="#">Descargar</a></td>
+                      </tr>
+                      <tr>
+                        <td>05/05/2025</td>
+                        <td>Hosting + Mantenimiento Arte-sano</td>
+                        <td>Plan Pro mensual</td>
+                        <td>$69.900</td>
+                        <td><span class="badge text-bg-success p-2">Pagado</span></td>
+                        <td><a class="btn btn-sm btn-turquesa" href="#">Descargar</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          
           </div>
         </div>
-      </div>
+      </section>
     </main>
     
     <!-- MODAL Cambiar contraseña -->
     <div class="modal fade" id="modalPassword" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content bg-dark text-light border-light">
+        <div class="modal-content bg-azul text-light border-light">
           <div class="modal-header">
-            <h2 class="modal-title h6">Cambiar contraseña</h2>
+            <h2 class="modal-title fs-5">Cambiar contraseña</h2>
             <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
-          <form id="passwordForm" class="modal-body needs-validation" novalidate>
+          <form class="modal-body needs-validation" action="#" method="post" novalidate>
             <div class="mb-3">
               <label class="form-label" for="oldPass">Contraseña actual</label>
-              <input type="password" id="oldPass" class="form-control" required minlength="6">
+              <input type="password" id="oldPass" name="old_password" class="form-control" required minlength="6">
               <div class="invalid-feedback">Ingresá tu contraseña actual.</div>
             </div>
             <div class="mb-3">
               <label class="form-label" for="newPass">Nueva contraseña</label>
-              <input type="password" id="newPass" class="form-control" required minlength="6">
+              <input type="password" id="newPass" name="new_password" class="form-control" required minlength="6">
               <div class="invalid-feedback">Mínimo 6 caracteres.</div>
             </div>
             <div class="mb-1">
               <label class="form-label" for="newPass2">Repetir nueva contraseña</label>
-              <input type="password" id="newPass2" class="form-control" required minlength="6">
+              <input type="password" id="newPass2" name="new_password_repeat" class="form-control" required
+                     minlength="6">
               <div class="invalid-feedback">Repetí la contraseña.</div>
             </div>
             <div class="modal-footer px-0">
@@ -249,27 +399,78 @@
       </div>
     </div>
     
-    <!-- FOOTER -->
+    
+    <!-- MODALES suscripciones -->
+    <div class="modal fade" id="modalChangePlan" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-azul text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Cambiar plan</h2>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-blanco">Elegí el nuevo plan:</p>
+            <div class="vstack gap-2">
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optStarter"
+                                             value="Starter"><label class="form-check-label"
+                                                                    for="optStarter">Starter</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPro"
+                                             value="Pro"><label class="form-check-label" for="optPro">Pro</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPremium"
+                                             value="Premium"><label class="form-check-label"
+                                                                    for="optPremium">Premium</label></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-turquesa" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-turquesa" id="confirmChangePlan">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modalCancel" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-azul text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Cancelar suscripción</h2>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-blanco mb-0">La cancelación se aplicará al <strong>fin del ciclo</strong>. ¿Confirmás?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-turquesa" data-bs-dismiss="modal">Volver</button>
+            <button class="btn btn-danger" id="confirmCancel">Confirmar cancelación</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <footer class="py-4 bg-black border-top border-secondary">
       <div class="container">
         <div class="row g-4 align-items-center">
-          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
-            <a class="navbar-brand font-quantum pt-0 fs-2" href="../../index.html">
-              <img src="../../assets/img/logo.png" alt="logo" class="img-fluid w-75" />
+          <div class="col-12 col-lg-4">
+            <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto"
+               href="../../index.html">
+              <img src="../../assets/img/logo.png" alt="logo" class="img-fluid w-50">
             </a>
           </div>
           <div class="col-12 col-lg-8">
-            <ul class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+            <ul
+              class="list-unstyled mb-0 text-blanco d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
               <li><i class="bi bi-person me-1 text-accent"></i> Ricardo Rodolfo Garcia</li>
               <li><i class="bi bi-calendar3 me-1 text-accent"></i> 37 años</li>
               <li><i class="bi bi-envelope me-1 text-accent"></i>
                 <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a>
               </li>
               <li><i class="bi bi-instagram me-1 text-accent"></i>
-                <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a>
+                <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata"
+                   target="_blank" rel="noopener">@lilitech_laplata</a>
               </li>
               <li><i class="bi bi-globe2 me-1 text-accent"></i>
-                <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a>
+                <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank"
+                   rel="noopener">lilitech.shop</a>
               </li>
             </ul>
           </div>
@@ -277,81 +478,8 @@
       </div>
     </footer>
     
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    
-    <!-- Lógica mínima: toggle edición, preview avatar, guardado mock -->
-    <script>
-      const $ = (s) => document.querySelector(s);
-      
-      const view = $("#profileView");
-      const form = $("#profileForm");
-      const btnEdit = $("#btnEdit");
-      const btnCancel = $("#btnCancel");
-      const btnCancel2 = $("#btnCancel2");
-      
-      // Inicializar form con valores de la vista
-      function loadFormFromView() {
-        $("#fNombre").value = $("#vNombre").textContent.trim();
-        $("#fApellido").value = $("#vApellido").textContent.trim();
-        $("#fEmail").value = $("#vEmail").textContent.trim();
-        $("#fTelefono").value = $("#vTelefono").textContent.trim();
-        $("#fCiudad").value = $("#vCiudad").textContent.trim();
-        $("#fInstagram").value = $("#vInstagram").textContent.trim();
-      }
-      loadFormFromView();
-      
-      function toggleEdit(on) {
-        view.classList.toggle("d-none", on);
-        form.classList.toggle("d-none", !on);
-        btnCancel.classList.toggle("d-none", !on);
-        btnEdit.classList.toggle("d-none", on);
-      }
-      
-      btnEdit.addEventListener("click", () => { loadFormFromView(); toggleEdit(true); });
-      btnCancel.addEventListener("click", () => toggleEdit(false));
-      btnCancel2.addEventListener("click", () => toggleEdit(false));
-      
-      // Guardar (mock): vuelca valores del form a la vista
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
-        $("#vNombre").textContent = $("#fNombre").value;
-        $("#vApellido").textContent = $("#fApellido").value;
-        $("#vEmail").textContent = $("#fEmail").value;
-        $("#vTelefono").textContent = $("#fTelefono").value || "—";
-        $("#vCiudad").textContent = $("#fCiudad").value || "—";
-        $("#vInstagram").textContent = $("#fInstagram").value || "—";
-        toggleEdit(false);
-      });
-      
-      // Avatar: preview + quitar
-      const avatarInput = $("#avatarInput");
-      const avatarImg = $("#avatarImg");
-      const btnRemoveAvatar = $("#btnRemoveAvatar");
-      avatarInput.addEventListener("change", (ev) => {
-        const file = ev.target.files?.[0];
-        if (!file) return;
-        const url = URL.createObjectURL(file);
-        avatarImg.src = url;
-      });
-      btnRemoveAvatar.addEventListener("click", () => {
-        avatarImg.src = "../img/avatar-placeholder.jpg";
-        avatarInput.value = "";
-      });
-      
-      // Cambiar contraseña (demo)
-      const passwordForm = $("#passwordForm");
-      passwordForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        if (!passwordForm.checkValidity()) { passwordForm.classList.add('was-validated'); return; }
-        const a = $("#newPass").value, b = $("#newPass2").value;
-        if (a !== b) { alert("Las contraseñas no coinciden."); return; }
-        // Acá harías fetch('/api/profile/password', { method:'POST', body:... })
-        const modal = bootstrap.Modal.getInstance(document.getElementById('modalPassword'));
-        modal.hide();
-        alert("Contraseña actualizada (demo).");
-      });
-    </script>
+    <!-- Solo Bootstrap, sin JS propio -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
   </body>
 </html>
