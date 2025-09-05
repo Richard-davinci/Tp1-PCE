@@ -1,11 +1,94 @@
-/* --- RESETS Y VARIABLES --- */
-/* Reset CSS */
+/* =========================================================
+   LiliEstudio — style.css (organizado)
+   Estructura:
+   1) Reset & Base
+   2) Variables (CSS Custom Props)
+   3) Tipografías & Helpers
+   4) Layout (html/body/main)
+   5) Utilidades (textos, fondos, scroll)
+   6) Componentes
+      6.1) Botones
+      6.2) Navegación (navbar)
+      6.3) Tabs (Underline)
+      6.4) Tablas
+      6.5) Footer
+      6.6) Avatar navbar
+      6.7) Contenedor admin (admin-shell)
+   7) Misceláneos
+   ---------------------------------------------------------
+   NOTA: Se preservan reglas y valores originales.
+         Los duplicados se mantienen y están marcados.
+   ========================================================= */
+
+
+/* ===================================
+   1) RESET & BASE
+   =================================== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+/* ===================================
+   2) VARIABLES (CSS CUSTOM PROPS)
+   =================================== */
+:root {
+    --azul: #0c202d;
+    --turquesa: #0ec49f;
+    --verde: #00d084;
+    --negro: #0d0d0d;
+    --gris: #cfd6dc;
+}
+
+
+/* ===================================
+   3) TIPOGRAFÍAS & HELPERS
+   =================================== */
+@font-face {
+    font-family: 'Quantum';
+    src: url('../assets/fonts/Quantum.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'BankGothic';
+    src: url('../assets/fonts/BankGothic-Medium.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 600;
+}
+
+.font-quantum {
+    font-family: 'Quantum', sans-serif;
+}
+
+.font-bankgothic {
+    font-family: 'BankGothic', sans-serif;
+}
+
+
+/* ===================================
+   4) LAYOUT (html / body / main)
+   =================================== */
 html {
     font-size: 100%;
     line-height: 1.15;
@@ -25,55 +108,56 @@ body {
     flex-direction: column;
 }
 
-ul, ol {
-    list-style: none;
+main {
+    flex: 1 0 auto;
 }
 
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+
+/* ===================================
+   5) UTILIDADES (textos, fondos, scroll)
+   =================================== */
+/* Textos/acento */
+.text-turquesa {
+    color: var(--turquesa) !important;
 }
 
-input, button, textarea, select {
-    font: inherit;
+/* Fondos */
+.bg-turquesa {
+    background-color: var(--turquesa);
+    color: var(--negro);
 }
 
-/* Variables globales */
-:root {
-    --azul: #23a4fb;
-    --turquesa: #0ec49f;
-    --verde: #00d084;
-    --negro: #0d0d0d;
+.bg-card-dark {
+    background: rgba(255, 255, 255, .2);
 }
 
-/* --- TIPOGRAFÍAS Y FUENTES --- */
-@font-face {
-    font-family: 'Quantum';
-    src: url('../assets/fonts/Quantum.otf') format('opentype');
-    font-weight: bold;
+.bg-card-light {
+    background: rgba(89, 89, 89, 0.8);
+    color: #fff;
 }
 
-@font-face {
-    font-family: 'BankGothic';
-    src: url('../assets/fonts/BankGothic-Medium.ttf') format('truetype');
-    font-weight: 500;
+.bg-gradient-dark {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
+    radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
+    var(--negro);
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 500;
+.bg-azul {
+    background-color: var(--azul);
+    color: #fff;
 }
 
-.font-quantum {
-    font-family: 'Quantum', sans-serif;
+/* Desplazamiento suave */
+.scroll-mt-navbar {
+    scroll-margin-top: 5rem;
 }
 
-.font-bankgothic {
-    font-family: 'BankGothic', sans-serif;
-}
 
-/* --- BOTONES --- */
+/* ===================================
+   6) COMPONENTES
+   =================================== */
+
+/* 6.1) BOTONES */
 .btn-turquesa {
     font-family: 'Bankgothic', sans-serif;
     color: #000;
@@ -105,7 +189,8 @@ input, button, textarea, select {
     border-color: var(--turquesa);
 }
 
-/* --- NAVEGACIÓN --- */
+
+/* 6.2) NAVEGACIÓN (NAVBAR) */
 .navbar .nav-link.active, .navbar .nav-link:hover {
     color: var(--turquesa) !important;
     font-weight: 600;
@@ -113,43 +198,118 @@ input, button, textarea, select {
     text-underline-offset: 6px;
 }
 
-/* --- TEXTOS Y COLORES ACCENT --- */
-.text-turquesa {
-    color: var(--turquesa) !important;
+
+/* 6.3) TABS (Underline) */
+.tabs-underline {
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
 }
 
-/* --- FONDO Y ESTILOS OSCUROS/CLAROS --- */
-.bg-turquesa {
-    background-color: var(--turquesa);
-    color: var(--negro);
+.tabs-underline .nav-link {
+    color: #bbb;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: .75rem .5rem;
+    position: relative;
 }
 
-.bg-card-dark {
-    background: rgba(255, 255, 255, .2);
+.tabs-underline .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: transparent;
+    transform: scaleX(0);
+    transition: transform .2s ease, background .2s ease;
 }
 
-.bg-card-light {
-    background: rgba(89, 89, 89, 0.8);
+.tabs-underline .nav-link:hover {
     color: #fff;
 }
 
-.bg-gradient-dark {
-    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
-    radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
-    var(--negro);
+.tabs-underline .nav-link:hover::after {
+    background: rgba(255, 255, 255, .35);
+    transform: scaleX(1);
 }
 
-/* --- DESPLAZAMIENTO SUAVE --- */
-.scroll-mt-navbar {
-    scroll-margin-top: 5rem;
+.tabs-underline .nav-link.active {
+    color: var(--turquesa);
+    font-weight: 600;
 }
 
-/* --- TABLAS --- */
+.tabs-underline .nav-link.active::after {
+    background: var(--turquesa);
+    transform: scaleX(1);
+}
+
+/* ----- DUPLICADO: Tabs estilo “Underline” (igual al login) ----- */
+/* (Se mantiene tal cual estaba en el archivo original) */
+.tabs-underline {
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.tabs-underline .nav-link {
+    color: #bbb;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: .75rem .5rem;
+    position: relative;
+    transition: color .2s ease;
+}
+
+.tabs-underline .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: transparent;
+    transform: scaleX(0);
+    transition: transform .2s ease, background .2s ease;
+}
+
+.tabs-underline .nav-link:hover {
+    color: #fff;
+}
+
+.tabs-underline .nav-link:hover::after {
+    background: rgba(255, 255, 255, .35);
+    transform: scaleX(1);
+}
+
+.tabs-underline .nav-link.active {
+    color: var(--turquesa);
+    font-weight: 600;
+}
+
+.tabs-underline .nav-link.active::after {
+    background: var(--turquesa);
+    transform: scaleX(1);
+}
+
+/* ----- /DUPLICADO ----- */
+
+
+/* 6.4) TABLAS */
 .table-dark th, .table-dark td {
     vertical-align: middle;
 }
 
-/* --- PIE DE PÁGINA --- */
+/* ----- DUPLICADO: Tablas ----- */
+.table-dark th, .table-dark td {
+    vertical-align: middle;
+}
+
+/* ----- /DUPLICADO ----- */
+
+
+/* 6.5) FOOTER */
 footer {
     flex-shrink: 0; /* Asegura que el footer no se contraiga */
     color: #bbb;
@@ -169,96 +329,41 @@ footer .text-accent {
     color: #00d1b2; /* Acento en los íconos */
 }
 
-main {
-    flex: 1 0 auto;
-}
 
-/* Tabs "Underline" */
-.tabs-underline {
-    gap: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,.15);
-}
-.tabs-underline .nav-link {
-    color: #bbb;
-    border: none;
-    background: transparent;
-    border-radius: 0;
-    padding: .75rem .5rem;
-    position: relative;
-}
-.tabs-underline .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: -1px;
-    height: 2px;
-    background: transparent;
-    transform: scaleX(0);
-    transition: transform .2s ease, background .2s ease;
-}
-.tabs-underline .nav-link:hover { color: #fff; }
-.tabs-underline .nav-link:hover::after {
-    background: rgba(255,255,255,.35);
-    transform: scaleX(1);
-}
-.tabs-underline .nav-link.active {
-    color: var(--turquesa);
-    font-weight: 600;
-}
-.tabs-underline .nav-link.active::after {
-    background: var(--turquesa);
-    transform: scaleX(1);
-}
-
-/* Tabs estilo “Underline” (igual al login) */
-.tabs-underline {
-    gap: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,.15);
-}
-.tabs-underline .nav-link {
-    color: #bbb;
-    border: none;
-    background: transparent;
-    border-radius: 0;
-    padding: .75rem .5rem;
-    position: relative;
-    transition: color .2s ease;
-}
-.tabs-underline .nav-link::after{
-    content:"";
-    position:absolute; left:0; right:0; bottom:-1px;
-    height:2px; background:transparent; transform:scaleX(0);
-    transition: transform .2s ease, background .2s ease;
-}
-.tabs-underline .nav-link:hover{ color:#fff; }
-.tabs-underline .nav-link:hover::after{
-    background: rgba(255,255,255,.35); transform:scaleX(1);
-}
-.tabs-underline .nav-link.active{
-    color: var(--turquesa); font-weight:600;
-}
-.tabs-underline .nav-link.active::after{
-    background: var(--turquesa); transform:scaleX(1);
-}
-
-/* Cuadro principal */
-.admin-shell{
-    background:#111; /* tono oscuro parejo sobre el gradiente */
-    border:1px solid rgba(255,255,255,.25);
-    border-radius:.75rem;
-}
-
-/* Botones coherentes con tu paleta */
-.btn-turquesa { font-weight:600; }
-.btn-outline-turquesa { font-weight:600; }
-
-/* Tablas */
-.table-dark th, .table-dark td { vertical-align: middle; }
-/* Avatar en navbar */
-.navbar-avatar{
-    width: 36px; height: 36px;
+/* 6.6) AVATAR EN NAVBAR */
+.navbar-avatar {
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid rgba(255,255,255,.25);
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+
+/* 6.7) CONTENEDOR ADMIN (admin-shell) */
+.admin-shell {
+    background: #111; /* tono oscuro parejo sobre el gradiente */
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: .75rem;
+}
+
+
+/* ===================================
+   7) MISCELÁNEOS
+   =================================== */
+.toogler-color {
+    border-color: var(--turquesa);
+    color: var(--turquesa);
+}
+
+/* Texto secundario más legible en fondos oscuros */
+:root {
+}
+
+/* subí el contraste */
+
+.text-blanco {
+    color: var(--gris);
 }
 
 
