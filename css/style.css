@@ -1,10 +1,52 @@
+/* --- RESETS Y VARIABLES --- */
+/* Reset CSS */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.15;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Variables globales */
 :root {
     --azul: #23a4fb;
-    --turquesa: #00ffcc;
+    --turquesa: #0ec49f;
     --verde: #00d084;
     --negro: #0d0d0d;
 }
 
+/* --- TIPOGRAFÍAS Y FUENTES --- */
 @font-face {
     font-family: 'Quantum';
     src: url('../assets/fonts/Quantum.otf') format('opentype');
@@ -16,15 +58,11 @@
     src: url('../assets/fonts/BankGothic-Medium.ttf') format('truetype');
     font-weight: 500;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 500;
-}
-
-html, body {
-    background-color: #f3f3f3;
-    font-family: 'Roboto', sans-serif;
 }
 
 .font-quantum {
@@ -35,6 +73,7 @@ html, body {
     font-family: 'BankGothic', sans-serif;
 }
 
+/* --- BOTONES --- */
 .btn-turquesa {
     font-family: 'Bankgothic', sans-serif;
     color: #000;
@@ -56,25 +95,30 @@ html, body {
     border-color: var(--turquesa);
     background-color: transparent;
     transition: all 0.3s ease;
+    font-family: 'BankGothic', sans-serif;
 }
 
 .nav-item .btn-outline-turquesa:hover,
 .nav-item .btn-outline-turquesa:focus {
     color: #000;
-    background-color: var(--turquesa) ;
+    background-color: var(--turquesa);
     border-color: var(--turquesa);
 }
 
+/* --- NAVEGACIÓN --- */
 .navbar .nav-link.active, .navbar .nav-link:hover {
     color: var(--turquesa) !important;
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 6px;
 }
+
+/* --- TEXTOS Y COLORES ACCENT --- */
 .text-turquesa {
     color: var(--turquesa) !important;
 }
 
+/* --- FONDO Y ESTILOS OSCUROS/CLAROS --- */
 .bg-turquesa {
     background-color: var(--turquesa);
     color: var(--negro);
@@ -84,53 +128,137 @@ html, body {
     background: rgba(255, 255, 255, .2);
 }
 
+.bg-card-light {
+    background: rgba(89, 89, 89, 0.8);
+    color: #fff;
+}
+
 .bg-gradient-dark {
     background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 255, 204, .15), transparent 40%),
     radial-gradient(1200px 600px at 90% 0%, rgba(2, 116, 190, .2), transparent 40%),
     var(--negro);
 }
 
+/* --- DESPLAZAMIENTO SUAVE --- */
 .scroll-mt-navbar {
     scroll-margin-top: 5rem;
 }
 
-
-
-.bg-card-light {
-    background: rgba(89, 89, 89, 0.8);
-    color: #fff;
-}
-
-
-/* Tables */
+/* --- TABLAS --- */
 .table-dark th, .table-dark td {
     vertical-align: middle;
 }
 
-/* Footer */
+/* --- PIE DE PÁGINA --- */
 footer {
+    flex-shrink: 0; /* Asegura que el footer no se contraiga */
     color: #bbb;
 }
+
 footer a {
     color: #fff;
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
     color: #00d1b2; /* Color de acento */
 }
+
 footer .text-accent {
     color: #00d1b2; /* Acento en los íconos */
 }
-/* Centra el logo en su contenedor */
-.navbar-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+
+main {
+    flex: 1 0 auto;
 }
 
-.navbar-brand img {
-    max-width: 70%;
-    height: auto;
+/* Tabs "Underline" */
+.tabs-underline {
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,.15);
 }
+.tabs-underline .nav-link {
+    color: #bbb;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: .75rem .5rem;
+    position: relative;
+}
+.tabs-underline .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 2px;
+    background: transparent;
+    transform: scaleX(0);
+    transition: transform .2s ease, background .2s ease;
+}
+.tabs-underline .nav-link:hover { color: #fff; }
+.tabs-underline .nav-link:hover::after {
+    background: rgba(255,255,255,.35);
+    transform: scaleX(1);
+}
+.tabs-underline .nav-link.active {
+    color: var(--turquesa);
+    font-weight: 600;
+}
+.tabs-underline .nav-link.active::after {
+    background: var(--turquesa);
+    transform: scaleX(1);
+}
+
+/* Tabs estilo “Underline” (igual al login) */
+.tabs-underline {
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+.tabs-underline .nav-link {
+    color: #bbb;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: .75rem .5rem;
+    position: relative;
+    transition: color .2s ease;
+}
+.tabs-underline .nav-link::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:-1px;
+    height:2px; background:transparent; transform:scaleX(0);
+    transition: transform .2s ease, background .2s ease;
+}
+.tabs-underline .nav-link:hover{ color:#fff; }
+.tabs-underline .nav-link:hover::after{
+    background: rgba(255,255,255,.35); transform:scaleX(1);
+}
+.tabs-underline .nav-link.active{
+    color: var(--turquesa); font-weight:600;
+}
+.tabs-underline .nav-link.active::after{
+    background: var(--turquesa); transform:scaleX(1);
+}
+
+/* Cuadro principal */
+.admin-shell{
+    background:#111; /* tono oscuro parejo sobre el gradiente */
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:.75rem;
+}
+
+/* Botones coherentes con tu paleta */
+.btn-turquesa { font-weight:600; }
+.btn-outline-turquesa { font-weight:600; }
+
+/* Tablas */
+.table-dark th, .table-dark td { vertical-align: middle; }
+/* Avatar en navbar */
+.navbar-avatar{
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,.25);
+}
+
+

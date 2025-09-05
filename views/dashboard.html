@@ -1,169 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Lilitech — Servicios web</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-              integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link href="../css/style.css" rel="stylesheet">
-    </head>
-    <body class="bg-dark text-light">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom border-secondary ">
-                <div class="container">
-                    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-                        Lili-Studio
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                            aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div id="mainNav" class="collapse navbar-collapse">
-                        <ul class="navbar-nav ms-auto align-items-lg-center">
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="nosotros.html">Sobre nosotros</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="font-Quantum nav-link" href="contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="btn btn-outline-accent ms-lg-2" href="iniciar-sesion.html"><i class="bi bi-person"></i> Login</a></li>
-                            <li class="nav-item"><a class="btn btn-cyan ms-lg-2" href="admin.html"><i class="bi bi-speedometer2"></i> Admin</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiliEstudio — Mi suscripción</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
+        <div class="container">
+          <a class="navbar-brand d-flex justify-content-sm-center justify-content-lg-start align-items-center m-auto font-quantum pt-0 fs-2"
+             href="../index.html">
+            <img src="../img/logo.png" alt="logo" class="img-fluid w-75" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#mainNav" style="border-color: var(--turquesa); color: var(--turquesa);">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto font-bankgothic justify-content-center">
+              <li class="nav-item text-center"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item text-center"><a class="nav-link" href="../views/nosotros.html">Nosotros</a></li>
+              <li class="nav-item text-center"><a class="nav-link" href="../views/servicios.html">Servicios</a></li>
+              <li class="nav-item text-center"><a class="nav-link" href="../views/contacto.html">Contacto</a></li>
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-turquesa ms-2" href="../views/iniciar-sesion.html">
+                  <i class="bi bi-person"></i> Iniciar Sesión
+                </a>
+              </li>
+              <li class="nav-item text-center">
+                <a class="btn btn-turquesa ms-2" href="../views/admin.html">
+                  <i class="bi bi-speedometer2"></i> Admin
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="py-5 bg-gradient-dark text-light">
+      <div class="container">
+        <header class="mb-4">
+          <h1 class="fs-2 font-bankgothic fw-bold">Mi suscripción</h1>
+          <p class="text-secondary mb-0">Estado actual y acciones disponibles.</p>
         </header>
         
-        <main class="py-5">
-            <div class="container">
-                <header class="mb-4">
-                    <h1 class="h3 fw-bold">Mi suscripción</h1>
-                    <p class="text-secondary mb-0">Estado actual y acciones disponibles.</p>
-                </header>
-                
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="card bg-surface border-0 shadow-sm">
-                            <div class="card-body">
-                                <h2 class="h6 text-secondary">Plan actual</h2>
-                                <p class="h4 mb-1" id="currentPlan">—</p>
-                                <p class="mb-3 text-secondary small">Facturación: <span id="currentBilling">—</span></p>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modalChangePlan">Cambiar plan</button>
-                                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalCancel">Cancelar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-8">
-                        <!-- Historial de pagos (mock) -->
-                        <div class="card bg-surface border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h2 class="h6 text-secondary mb-0">Historial de pagos</h2>
-                                    <span class="badge text-bg-success">Al día</span>
-                                </div>
-                                <div class="table-responsive mt-3">
-                                    <table class="table table-dark table-striped align-middle mb-0">
-                                        <thead><tr><th>Fecha</th><th>Descripción</th><th>Monto</th><th>Estado</th></tr></thead>
-                                        <tbody id="paymentsBody">
-                                            <tr><td>05/07/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
-                                            <tr><td>05/06/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
-                                            <tr><td>05/05/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Tickets (mock) -->
-                        <div class="card bg-surface border-0 shadow-sm mt-4">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h2 class="h6 text-secondary mb-0">Tickets de soporte</h2>
-                                    <button class="btn btn-sm btn-cyan" id="newTicket">Nuevo ticket</button>
-                                </div>
-                                <div class="table-responsive mt-3">
-                                    <table class="table table-dark table-striped align-middle mb-0">
-                                        <thead><tr><th>#</th><th>Título</th><th>Estado</th></tr></thead>
-                                        <tbody id="ticketsBody">
-                                            <tr><td>1021</td><td>Mejorar velocidad en inicio</td><td><span class="badge text-bg-warning">En curso</span></td></tr>
-                                            <tr><td>1019</td><td>Agregar ancla a sección FAQ</td><td><span class="badge text-bg-success">Resuelto</span></td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
+        <div class="row g-4">
+          <!-- Col izquierda -->
+          <div class="col-lg-4">
+            <div class="card bg-dark text-light border-light shadow-sm">
+              <div class="card-body">
+                <h2 class="h6 text-secondary">Plan actual</h2>
+                <p class="h4 mb-1" id="currentPlan">—</p>
+                <p class="mb-3 text-secondary small">Facturación: <span id="currentBilling">—</span></p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-turquesa" data-bs-toggle="modal" data-bs-target="#modalChangePlan">Cambiar plan</button>
+                  <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalCancel">Cancelar</button>
                 </div>
+              </div>
             </div>
-        </main>
-        
-        <!-- Modales -->
-        <div class="modal fade" id="modalChangePlan" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog"><div class="modal-content bg-surface">
-                <div class="modal-header">
-                    <h2 class="modal-title h6">Cambiar plan</h2>
-                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          
+          <!-- Col derecha -->
+          <div class="col-lg-8">
+            <!-- Historial de pagos -->
+            <div class="card bg-dark text-light border-light shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="h6 text-secondary mb-0">Historial de pagos</h2>
+                  <span class="badge text-bg-success">Al día</span>
                 </div>
-                <div class="modal-body">
-                    <p class="text-secondary">Elegí el nuevo plan:</p>
-                    <div class="vstack gap-2">
-                        <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optStarter" value="Starter"><label class="form-check-label" for="optStarter">Starter</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPro" value="Pro"><label class="form-check-label" for="optPro">Pro</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPremium" value="Premium"><label class="form-check-label" for="optPremium">Premium</label></div>
-                    </div>
+                <div class="table-responsive mt-3">
+                  <table class="table table-dark table-striped align-middle mb-0">
+                    <thead><tr><th>Fecha</th><th>Descripción</th><th>Monto</th><th>Estado</th></tr></thead>
+                    <tbody id="paymentsBody">
+                      <tr><td>05/07/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
+                      <tr><td>05/06/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
+                      <tr><td>05/05/2025</td><td>Suscripción Pro mensual</td><td>$69.990</td><td><span class="badge text-bg-success">Pagado</span></td></tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
-                    <button class="btn btn-cyan" id="confirmChangePlan">Confirmar</button>
-                </div>
-            </div></div>
-        </div>
-        
-        <div class="modal fade" id="modalCancel" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog"><div class="modal-content bg-surface">
-                <div class="modal-header">
-                    <h2 class="modal-title h6">Cancelar suscripción</h2>
-                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-secondary mb-0">La cancelación se aplicará al <strong>fin del ciclo</strong>. ¿Confirmás?</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-outline-light" data-bs-dismiss="modal">Volver</button>
-                    <button class="btn btn-danger" id="confirmCancel">Confirmar cancelación</button>
-                </div>
-            </div></div>
-        </div>
-        
-        <footer class="py-4 bg-black border-top border-secondary">
-            <div class="container">
-                <div class="row g-3 align-items-center">
-                    <div class="col-12 col-md d-flex align-items-center gap-3">
-                        Lili-Studio
-                        <p class="mb-0 small text-secondary">© <span id="year"></span> Lili Studio — Argentina</p>
-                    
-                    </div>
-                    <div class="col-12 col-md-auto">
-                        <ul class="list-unstyled mb-0 small text-secondary d-flex flex-column flex-md-row gap-3">
-                            <li><i class="bi bi-person me-1 text-accent" aria-hidden="true"></i><span class="visually-hidden">Alumno:</span> Ricardo Rodolfo Garcia</li>
-                            <li><i class="bi bi-calendar3 me-1 text-accent" aria-hidden="true"></i> 37 años</li>
-                            <li><i class="bi bi-envelope me-1 text-accent" aria-hidden="true"></i><a class="" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a></li>
-                            <li><i class="bi bi-instagram me-1 text-accent" aria-hidden="true"></i><a class="" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a></li>
-                            <li><i class="bi bi-globe2 me-1 text-accent" aria-hidden="true"></i><a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a></li>
-                        </ul>
-                    </div>
-                </div>
+              </div>
             </div>
-        </footer>
-        
-        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../js/main.js"></script>
-    </body>
+            
+            <!-- Tickets -->
+            <div class="card bg-dark text-light border-light shadow-sm mt-4">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="h6 text-secondary mb-0">Tickets de soporte</h2>
+                  <button class="btn btn-turquesa btn-sm" id="newTicket">Nuevo ticket</button>
+                </div>
+                <div class="table-responsive mt-3">
+                  <table class="table table-dark table-striped align-middle mb-0">
+                    <thead><tr><th>#</th><th>Título</th><th>Estado</th></tr></thead>
+                    <tbody id="ticketsBody">
+                      <tr><td>1021</td><td>Mejorar velocidad en inicio</td><td><span class="badge text-bg-warning">En curso</span></td></tr>
+                      <tr><td>1019</td><td>Agregar ancla a sección FAQ</td><td><span class="badge text-bg-success">Resuelto</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- MODALES -->
+    <div class="modal fade" id="modalChangePlan" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title h6">Cambiar plan</h2>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-secondary">Elegí el nuevo plan:</p>
+            <div class="vstack gap-2">
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optStarter" value="Starter"><label class="form-check-label" for="optStarter">Starter</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPro" value="Pro"><label class="form-check-label" for="optPro">Pro</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="planOpt" id="optPremium" value="Premium"><label class="form-check-label" for="optPremium">Premium</label></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-turquesa" id="confirmChangePlan">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modalCancel" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light border-light">
+          <div class="modal-header">
+            <h2 class="modal-title h6">Cancelar suscripción</h2>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-secondary mb-0">La cancelación se aplicará al <strong>fin del ciclo</strong>. ¿Confirmás?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-light" data-bs-dismiss="modal">Volver</button>
+            <button class="btn btn-danger" id="confirmCancel">Confirmar cancelación</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="py-4 bg-black border-top border-secondary">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
+            <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
+              <img src="../img/logo.png" alt="logo" class="img-fluid w-75" />
+            </a>
+          </div>
+          <div class="col-12 col-lg-8">
+            <ul class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+              <li><i class="bi bi-person me-1 text-accent"></i> Ricardo Rodolfo Garcia</li>
+              <li><i class="bi bi-calendar3 me-1 text-accent"></i> 37 años</li>
+              <li><i class="bi bi-envelope me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a>
+              </li>
+              <li><i class="bi bi-instagram me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a>
+              </li>
+              <li><i class="bi bi-globe2 me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+  </body>
 </html>
