@@ -365,5 +365,54 @@ footer .text-accent {
 .text-blanco {
     color: var(--gris);
 }
+.pasos-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #0c202d, #0d2a39);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.pasos-container:hover {
+    transform: translateY(-5px);
+}
+
+.pasos-container h3 {
+    font-family: "BankGothic", sans-serif;
+    color: #0ec49f;
+    border-bottom: 2px solid #0ec49f;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pasos-container ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.pasos-container li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pasos-container li::before {
+    content: "✔";
+    color: #0ec49f;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Imagen de producto/servicio arriba de la card */
+.service-card .card-img-top{
+    aspect-ratio: 16 / 9;       /* mantiene proporción */
+    object-fit: cover;          /* recorta sin deformar */
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    background: #0f0f0f;        /* por si tarda en cargar */
+}
 
 
