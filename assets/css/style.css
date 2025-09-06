@@ -146,11 +146,12 @@ main {
     font-family: 'BankGothic', sans-serif;
     color: #000;
     background-color: var(--turquesa);
-    border-color: var(--turquesa);
+    border-color: var(--azul);
 }
 
 .btn-turquesa:hover {
     background-color: #7ff5e3;
+    border-color: var(--azul);
     color: #000;
 }
 
@@ -356,4 +357,12 @@ footer .text-accent {
     height: 56px;
 }
 
+iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+}
 
+.bg-blanco {
+
+}
