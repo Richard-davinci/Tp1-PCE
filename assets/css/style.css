@@ -1,23 +1,3 @@
-/* =========================================================
-   LiliEstudio — style.css (limpio y unificado)
-   Estructura:
-   1) Reset & Base
-   2) Variables
-   3) Tipografías & Helpers
-   4) Layout (html/body/main)
-   5) Utilidades (textos, fondos, scroll)
-   6) Componentes
-      6.1) Botones
-      6.2) Navbar
-      6.3) Tabs (Underline + Segment)
-      6.4) Tablas
-      6.5) Footer
-      6.6) Avatar navbar
-      6.7) Contenedor admin
-   7) Misceláneos
-   ========================================================= */
-
-/* 1) RESET & BASE */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -37,7 +17,6 @@ input, button, textarea, select {
     font: inherit;
 }
 
-/* 2) VARIABLES */
 :root {
     --azul: #0c202d;
     --turquesa: #0ec49f;
@@ -47,7 +26,6 @@ input, button, textarea, select {
     --gris: #43494e;
 }
 
-/* 3) TIPOGRAFÍAS & HELPERS */
 @font-face {
     font-family: 'Quantum';
     src: url('../fonts/Quantum.otf') format('opentype');
@@ -74,7 +52,6 @@ input, button, textarea, select {
     font-family: 'BankGothic', sans-serif;
 }
 
-/* 4) LAYOUT */
 html {
     font-size: 100%;
     line-height: 1.15;
@@ -98,7 +75,6 @@ main {
     flex: 1 0 auto;
 }
 
-/* 5) UTILIDADES (textos, fondos, scroll) */
 .text-turquesa {
     color: var(--turquesa);
 }
@@ -109,6 +85,10 @@ main {
 
 .text-blanco {
     color: var(--blanco);
+}
+
+.text-negro {
+    color: var(--negro);
 }
 
 .bg-turquesa {
@@ -140,8 +120,6 @@ main {
     scroll-margin-top: 5rem;
 }
 
-/* 6) COMPONENTES */
-/* 6.1) BOTONES */
 .btn-turquesa {
     font-family: 'BankGothic', sans-serif;
     color: #000;
@@ -174,7 +152,11 @@ main {
     border-color: var(--turquesa);
 }
 
-/* 6.2) NAVBAR */
+.btn-azul {
+    background-color: var(--azul);
+    color: #fff;
+}
+
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
     color: var(--turquesa) !important;
@@ -183,8 +165,6 @@ main {
     text-underline-offset: 6px;
 }
 
-/* 6.3) TABS */
-/* — Underline (optimizado para fondo oscuro: .bg-azul) */
 .tabs-underline {
     gap: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, .15);
@@ -231,7 +211,6 @@ main {
     transform: scaleX(1);
 }
 
-/* — Segment (píldoras, pensado para .bg-azul) */
 .tabs-segment {
     display: inline-flex;
     gap: .5rem;
@@ -260,7 +239,6 @@ main {
     box-shadow: 0 0 0 .12rem rgba(14, 196, 159, .25);
 }
 
-/* chip opcional en tabs */
 .tabs-segment .tab-chip {
     display: inline-block;
     padding: .12rem .45rem;
@@ -273,12 +251,10 @@ main {
     letter-spacing: .2px;
 }
 
-/* 6.4) TABLAS */
 .table-dark th, .table-dark td {
     vertical-align: middle;
 }
 
-/* 6.5) FOOTER */
 footer {
     flex-shrink: 0;
     color: #bbb;
@@ -298,7 +274,6 @@ footer .text-accent {
     color: #00d1b2;
 }
 
-/* 6.6) AVATAR NAVBAR */
 .navbar-avatar {
     width: 36px;
     height: 36px;
@@ -307,14 +282,12 @@ footer .text-accent {
     border: 1px solid rgba(255, 255, 255, .25);
 }
 
-/* 6.7) CONTENEDOR ADMIN */
 .admin-shell {
     background: #111;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: .75rem;
 }
 
-/* 7) MISCELÁNEOS */
 .toogler-color {
     border-color: var(--turquesa);
     color: var(--turquesa);
@@ -340,7 +313,6 @@ footer .text-accent {
     margin-bottom: 1.5rem;
 }
 
-/* Cards de servicio */
 .service-card .card-img-top {
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -362,13 +334,3 @@ iframe {
     height: 280px;
     border: 0;
 }
-
-.text-negro {
-    color: var(--negro);
-}
-
-.btn-azul{
-    background-color: var(--azul);
-    color: #fff;
-}
-
