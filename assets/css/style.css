@@ -363,6 +363,12 @@ iframe {
     border: 0;
 }
 
-.bg-blanco {
-
+.text-negro {
+    color: var(--negro);
 }
+
+.btn-azul{
+    background-color: var(--azul);
+    color: #fff;
+}
+

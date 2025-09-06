@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LiliEstudio — Admin · Crear servicio</title>
+    
+    <!-- Bootstrap + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+    
+    <!-- Favicon + Estilos -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico"/>
+    <link href="../assets/css/style.css" rel="stylesheet"/>
+  </head>
+  
+  <body class="bg-gradient-dark text-light">
+    <!-- NAV -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark border-bottom">
+        <div class="container">
+          <a class="navbar-brand d-flex justify-content-center justify-content-lg-start align-items-center m-auto" href="../index.html">
+            <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75">
+          </a>
+          
+          <button class="navbar-toggler toogler-color" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto font-bankgothic align-items-end align-items-lg-center gap-0 gap-lg-2">
+              <li class="nav-item text-center"><a class="nav-link text-light" href="../index.html">Inicio</a></li>
+              <li class="nav-item text-center"><a class="nav-link text-light" href="../views/servicios.html">Servicios</a></li>
+              <li class="nav-item text-center"><a class="nav-link text-light" href="../views/contacto.html">Contacto</a></li>
+              
+              <li class="nav-item dropdown ms-lg-2">
+                <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-light justify-content-center" href="#" data-bs-toggle="dropdown">
+                  <img src="../assets/img/ricardo.webp" alt="Avatar" class="navbar-avatar">
+                  <span>Mi cuenta</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow border-light bg-azul">
+                  <li><a class="dropdown-item" href="../views/usuario/perfil.html"><i class="bi bi-person-circle me-2"></i> Ver perfil</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="py-5">
+      <div class="container">
+        <header class="mb-4">
+          <h1 id="pageTitle" class="fs-1 font-bankgothic fw-bold mb-1">Crear servicio</h1>
+          <p class="text-secondary mb-0">Completá los datos del servicio y agregá uno o más planes.</p>
+        </header>
+        
+        <!-- DATOS DEL SERVICIO -->
+        <section aria-labelledby="datosTitle">
+          <div class="card bg-azul text-light border-light shadow-sm">
+            <div class="card-body">
+              <h2 id="datosTitle" class="fs-4 font-bankgothic text-turquesa mb-3">Datos</h2>
+              
+              <!-- IMPORTANTES: method + enctype + novalidate (manejo Bootstrap) -->
+              <form class="needs-validation" novalidate method="post" enctype="multipart/form-data">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="srvNombre">Nombre</label>
+                    <input id="srvNombre" name="srvNombre" class="form-control" placeholder="p.ej. Hosting + Mantenimiento" required>
+                    <div class="invalid-feedback">Ingresá el nombre del servicio.</div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <label class="form-label" for="srvCategoria">Categoría</label>
+                    <select id="srvCategoria" name="srvCategoria" class="form-select" required>
+                      <option value="">Elegí...</option>
+                      <option>Infraestructura</option>
+                      <option>Web</option>
+                      <option>Marketing</option>
+                    </select>
+                    <div class="invalid-feedback">Elegí una categoría.</div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <label class="form-label" for="srvEstado">Estado</label>
+                    <select id="srvEstado" name="srvEstado" class="form-select" required>
+                      <option value="">Elegí...</option>
+                      <option>Activo</option>
+                      <option>Pausado</option>
+                      <option>Discontinuado</option>
+                    </select>
+                    <div class="invalid-feedback">Elegí un estado.</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <label class="form-label" for="srvSubtitulo">Subtítulo</label>
+                    <input id="srvSubtitulo" name="srvSubtitulo" class="form-control" placeholder="Bajada corta del servicio">
+                  </div>
+                  
+                  <div class="col-12">
+                    <label class="form-label" for="srvDescripcion">Descripción</label>
+                    <textarea id="srvDescripcion" name="srvDescripcion" class="form-control" rows="3" required></textarea>
+                    <div class="invalid-feedback">Ingresá una descripción.</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <label class="form-label" for="srvCondiciones">Condiciones (una por línea)</label>
+                    <textarea id="srvCondiciones" name="srvCondiciones" class="form-control" rows="3"
+                              placeholder="Facturación mensual por adelantado&#10;Backups diarios (30 días)&#10;Cancelación al cierre de ciclo"></textarea>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label class="form-label" for="srvCover">Imagen cover (16:9)</label>
+                    <input id="srvCover" name="srvCover" type="file" class="form-control" accept="image/*">
+                    <div class="form-text text-secondary">Sugerido 1280×720px (o mayor) en JPG/PNG.</div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label class="form-label" for="srvThumb">Imagen thumb (16:9)</label>
+                    <input id="srvThumb" name="srvThumb" type="file" class="form-control" accept="image/*" required>
+                    <div class="form-text text-secondary">Sugerido 800×450px. Campo requerido.</div>
+                    <div class="invalid-feedback">Subí la imagen representativa.</div>
+                  </div>
+                </div>
+                
+                <div class="mt-4 d-flex justify-content-end gap-2">
+                  <a href="admin.html" class="btn btn-dark font-bankgothic">Cancelar</a>
+                  <button class="btn btn-turquesa font-bankgothic" type="submit">Guardar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        
+        <!-- AGREGAR PLAN -->
+        <section class="mt-4" aria-labelledby="planesTitle">
+          <div class="card bg-azul text-light border-light shadow-sm">
+            <div class="card-body">
+              <h2 id="planesTitle" class="fs-4 font-bankgothic text-turquesa mb-3">Agregar plan</h2>
+              
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label class="form-label" for="planNombre">Nombre del plan</label>
+                  <input type="text" class="form-control" id="planNombre" placeholder="Clásico">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="planPrecio">Precio</label>
+                  <input type="number" class="form-control" id="planPrecio" placeholder="8999" min="0" step="any" inputmode="decimal">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="planPeriodo">Periodo</label>
+                  <select class="form-select" id="planPeriodo">
+                    <option>Mensual</option>
+                    <option>Anual</option>
+                    <option>Único</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="planFeatures">Características</label>
+                  <textarea class="form-control" id="planFeatures" rows="3" placeholder="1 sitio web&#10;10 GB SSD&#10;SSL gratis"></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-end">
+                  <button type="button" class="btn btn-turquesa font-bankgothic" id="btnAgregarPlan">
+                    <i class="bi bi-plus-lg me-1"></i>Agregar plan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- LISTA DE PLANES -->
+        <section class="mt-4" aria-labelledby="listaPlanesTitle">
+          <div class="card bg-azul text-light border-light shadow-sm">
+            <div class="card-body">
+              <h2 id="listaPlanesTitle" class="fs-4 font-bankgothic text-turquesa mb-3">Planes del servicio</h2>
+              
+              <div class="table-responsive">
+                <table class="table table-dark table-striped align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Periodo</th>
+                      <th>Características</th>
+                      <th class="text-end">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaPlanes">
+                    <!-- Ejemplo (podés borrarlo): -->
+                    <tr>
+                      <td>Clásico</td>
+                      <td>AR$ 8.999</td>
+                      <td>Mensual</td>
+                      <td>1 sitio, 10 GB SSD, SSL gratis</td>
+                      <td class="text-end">
+                        <div class="btn-group btn-group-sm">
+                          <button class="btn btn-outline-turquesa"><i class="bi bi-pencil"></i> Editar</button>
+                          <button class="btn btn-outline-danger"><i class="bi bi-trash"></i> Eliminar</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- /Ejemplo -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+      </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="py-4 bg-black border-top border-secondary">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-3">
+            <a class="navbar-brand font-quantum pt-0 fs-2" href="../index.html">
+              <img src="../assets/img/logo.png" alt="logo" class="img-fluid w-75"/>
+            </a>
+          </div>
+          <div class="col-12 col-lg-8">
+            <ul class="list-unstyled mb-0 text-secondary d-flex flex-column flex-md-row align-items-center justify-content-md-end gap-3 small">
+              <li><i class="bi bi-person me-1 text-accent"></i> Ricardo Rodolfo Garcia</li>
+              <li><i class="bi bi-envelope me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="mailto:ricardo.garcia@davinci.edu.ar">ricardo.garcia@davinci.edu.ar</a>
+              </li>
+              <li><i class="bi bi-instagram me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="https://www.instagram.com/lilitech_laplata" target="_blank" rel="noopener">@lilitech_laplata</a>
+              </li>
+              <li><i class="bi bi-globe2 me-1 text-accent"></i>
+                <a class="link-light link-underline-opacity-0" href="https://lilitech.shop/" target="_blank" rel="noopener">lilitech.shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
